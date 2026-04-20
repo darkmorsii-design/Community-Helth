@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مرض السكري | صحة مجتمع</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        medical: { teal: '#00897b', 'teal-light': '#e0f2f1', 'teal-dark': '#00695c', blue: '#0277bd', 'blue-light': '#e3f2fd', grey: '#f5f5f5' }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Tajawal', sans-serif; }
+        .slide-up { animation: slideUp 0.6s ease-out forwards; opacity: 0; }
+        @keyframes slideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body class="bg-white text-slate-800 antialiased font-sans">
+
+    <!-- Nav (Shared) -->
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-medical-teal-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center gap-2 group">
+                        <div class="bg-medical-teal-light p-2 rounded-xl group-hover:bg-medical-teal transition-colors"><i data-lucide="heart" class="w-6 h-6 text-medical-teal group-hover:text-white"></i></div>
+                        <span class="text-xl font-bold text-medical-teal-dark tracking-tight">صحة مجتمع</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center gap-8 font-medium">
+                    <a href="index.html" class="text-slate-600 hover:text-medical-teal transition-colors">الرئيسية</a>
+                    <a href="index.html#medical-content" class="text-slate-600 hover:text-medical-teal transition-colors">المحتوي الطبي</a>
+                    <a href="index.html#footer" class="text-slate-600 hover:text-medical-teal transition-colors">من نحن</a>
+                </div>
+                <div class="md:hidden flex items-center"><button id="menu-btn" class="p-2"><i data-lucide="menu" class="w-6 h-6"></i></button></div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-medical-teal-light">
+            <div class="px-4 py-6 space-y-2">
+                <a href="index.html" class="block p-4 rounded-lg">الرئيسية</a>
+                <a href="index.html#medical-content" class="block p-4 rounded-lg">المحتوي الطبي</a>
+                <a href="index.html#footer" class="block p-4 rounded-lg">من نحن</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="bg-medical-teal-light/40 py-24 border-b border-medical-teal-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center slide-up">
+            <h1 class="text-4xl md:text-6xl font-bold text-medical-teal-dark mb-6">فهم وإدارة مرض السكري</h1>
+            <p class="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">دليل شامل حول أنواع مرض السكري، أعراضه، وكيفية التعايش معه بسلام لتحسين جودة حياتك اليومية.</p>
+        </div>
+    </header>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-16">
+            <!-- Content -->
+            <div class="lg:col-span-2 space-y-20">
+                <section class="slide-up">
+                    <h2 class="text-3xl font-bold text-slate-900 mb-8 flex items-center gap-4">
+                        <i data-lucide="beaker" class="w-8 h-8 text-medical-teal"></i> ما هو مرض السكري؟
+                    </h2>
+                    <div class="text-lg text-slate-600 leading-[1.8] space-y-6">
+                        <p>مرض السكري هو حالة طبية مزمنة تؤثر على كيفية معالجة الجسم لغلوكوز الدم. يحدث السكري عندما لا ينتج البنكرياس كمية كافية من الأنسولين.</p>
+                        <div class="bg-medical-grey p-10 rounded-[2.5rem] border border-medical-teal-light">
+                            <h3 class="font-bold text-medical-teal-dark mb-6 text-xl underline decoration-2 underline-offset-8 decoration-medical-teal/30">الأنواع الرئيسية:</h3>
+                            <div class="space-y-6">
+                                <div class="flex gap-4">
+                                    <div class="bg-medical-teal text-white w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 font-bold">١</div>
+                                    <p><span class="font-bold text-slate-900">النوع الأول:</span> غالباً ما يُشخص في الأطفال، حيث يهاجم الجهاز المناعي خلايا البنكرياس.</p>
+                                </div>
+                                <div class="flex gap-4">
+                                    <div class="bg-medical-teal text-white w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 font-bold">٢</div>
+                                    <p><span class="font-bold text-slate-900">النوع الثاني:</span> هو الأكثر شيوعاً، ويرتبط بنمط الحياة والوزن الزائد والوراثة.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="slide-up" style="animation-delay: 0.2s;">
+                    <div class="rounded-[3rem] overflow-hidden shadow-2xl h-[500px] border-4 border-medical-teal-light/20">
+                        <img src="https://picsum.photos/seed/medical-monitor/1200/800" class="w-full h-full object-cover" referrerPolicy="no-referrer">
+                    </div>
+                    <p class="text-center mt-6 italic text-slate-500">فحص سكر الدم المنتظم هو الخطوة الأولى للإدارة السليمة للمرض.</p>
+                </section>
+
+                <!-- Video placeholder -->
+                <section class="bg-medical-blue-light/30 p-12 rounded-[3rem] border border-medical-blue-light text-center slide-up">
+                    <i data-lucide="play-circle" class="w-20 h-20 text-medical-blue mx-auto mb-8"></i>
+                    <h3 class="text-2xl font-bold text-slate-900 mb-4">فيديو تعليمي: كيف يعمل الأنسولين؟</h3>
+                    <p class="text-slate-600 mb-10 max-w-xl mx-auto">شاهد هذا الفيديو المبسط لفهم دور الأنسولين في الجسم وكيف يؤثر السكري على هذه العملية.</p>
+                    <div class="aspect-video bg-white/50 border-4 border-dashed border-medical-blue/20 rounded-3xl flex items-center justify-center relative group cursor-pointer overflow-hidden">
+                        <span class="text-slate-400 font-bold group-hover:text-medical-blue transition-colors">فيديو يوتيوب سيظهر هنا</span>
+                        <div class="absolute inset-0 bg-medical-blue/5 group-hover:bg-medical-blue/10 transition-colors"></div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="space-y-10 shrink-0">
+                <div class="bg-white p-10 rounded-[2.5rem] border border-medical-teal-light shadow-xl sticky top-28">
+                    <h3 class="text-2xl font-bold text-medical-teal-dark mb-10 pb-4 border-b border-medical-teal-light">نصائح للتعايش</h3>
+                    <div class="space-y-10">
+                        <div class="flex gap-5">
+                            <div class="bg-medical-teal-light p-4 rounded-2xl"><i data-lucide="apple" class="text-medical-teal"></i></div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 mb-1">الغذاء الصحي</h4>
+                                <p class="text-sm text-slate-600 leading-relaxed">التركيز على الألياف، الخضروات، وتقليل السكريات المكررة.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-5">
+                            <div class="bg-medical-blue-light p-4 rounded-2xl"><i data-lucide="activity" class="text-medical-blue"></i></div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 mb-1">النشاط البدني</h4>
+                                <p class="text-sm text-slate-600 leading-relaxed">المشي لمدة 30 دقيقة يومياً يساعد في تنظيم مستويات السكر.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-12 bg-medical-teal text-white p-8 rounded-3xl text-center shadow-lg">
+                        <p class="text-sm mb-4 font-medium opacity-90">هل لديك أسئلة؟</p>
+                        <a href="mailto:info@health.com" class="font-bold border-b-2 border-white/50 hover:border-white transition-all">استشر متخصصاً الآن</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer (Shared) -->
+    <footer class="bg-medical-grey border-t border-medical-teal-light py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-slate-500 font-medium">© 2026 صحة مجتمع. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        document.getElementById('menu-btn').onclick = () => document.getElementById('mobile-menu').classList.toggle('hidden');
+    </script>
+</body>
+</html>

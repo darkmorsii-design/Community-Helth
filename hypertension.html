@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مرض ضغط الدم | صحة مجتمع</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        medical: { teal: '#00897b', 'teal-light': '#e0f2f1', 'teal-dark': '#00695c', blue: '#0277bd', 'blue-light': '#e3f2fd', grey: '#f5f5f5' }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Tajawal', sans-serif; }
+        .slide-up { animation: slideUp 0.6s ease-out forwards; opacity: 0; }
+        @keyframes slideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body class="bg-white text-slate-800 antialiased font-sans">
+
+    <!-- Nav (Shared) -->
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-medical-teal-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center gap-2 group transition-all">
+                        <div class="bg-medical-teal-light p-2 rounded-xl group-hover:bg-medical-teal transition-colors"><i data-lucide="heart" class="w-6 h-6 text-medical-teal group-hover:text-white"></i></div>
+                        <span class="text-xl font-bold text-medical-teal-dark tracking-tight">صحة مجتمع</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center gap-8 font-medium">
+                    <a href="index.html" class="text-slate-600 hover:text-medical-teal transition-colors">الرئيسية</a>
+                    <a href="index.html#medical-content" class="text-slate-600 hover:text-medical-teal transition-colors">المحتوي الطبي</a>
+                    <a href="index.html#footer" class="text-slate-600 hover:text-medical-teal transition-colors">من نحن</a>
+                </div>
+                <div class="md:hidden flex items-center"><button id="menu-btn" class="p-2"><i data-lucide="menu" class="w-6 h-6"></i></button></div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-medical-teal-light">
+            <div class="px-4 py-6 space-y-2">
+                <a href="index.html" class="block p-4 rounded-lg">الرئيسية</a>
+                <a href="index.html#medical-content" class="block p-4 rounded-lg">المحتوي الطبي</a>
+                <a href="index.html#footer" class="block p-4 rounded-lg">من نحن</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="bg-medical-blue-light/40 py-24 border-b border-medical-blue-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center slide-up">
+            <h1 class="text-4xl md:text-6xl font-bold text-medical-blue mb-6">ارتفاع ضغط الدم: القاتل الصامت</h1>
+            <p class="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">تعرف على مخاطر ارتفاع ضغط الدم، وكيف يمكنك التحكم فيه من خلال خطوات عملية بسيطة وتغيير نمط حياتك.</p>
+        </div>
+    </header>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-16">
+            <!-- Content -->
+            <div class="lg:col-span-2 space-y-20">
+                <section class="slide-up">
+                    <h2 class="text-3xl font-bold text-slate-900 mb-8 flex items-center gap-4">
+                        <i data-lucide="heart-pulse" class="w-8 h-8 text-red-500"></i> فهم ضغط الدم
+                    </h2>
+                    <div class="text-lg text-slate-600 leading-[1.8] space-y-8">
+                        <p>يحدث ارتفاع ضغط الدم عندما تكون قوة دفع الدم ضد جدران الشرايين مرتفعة باستمرار، مما قد يسبب بمرور الوقت تلفاً في الأوعية الدموية.</p>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div class="bg-medical-grey p-8 rounded-3xl border border-medical-teal-light/50">
+                                <h3 class="font-bold text-slate-900 mb-4 text-xl">لماذا هو قاتل صامت؟</h3>
+                                <p class="text-base text-slate-600">لأن معظم المصابين به لا يشعرون بأي أعراض واضحة حتى تظهر المضاعفات الخطيرة مثل السكتة الدماغية.</p>
+                            </div>
+                            <div class="bg-medical-grey p-8 rounded-3xl border border-medical-teal-light/50">
+                                <h3 class="font-bold text-slate-900 mb-4 text-xl">القراءات الطبيعية</h3>
+                                <p class="text-base text-slate-600">تعتبر القراءة تحت (120/80 مللم زئبق) هي القراءة المثالية لمعظم البالغين الأصحاء.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="slide-up">
+                    <div class="rounded-[3rem] overflow-hidden shadow-2xl bg-medical-blue-light/20 p-2 border-4 border-medical-blue-light/30">
+                        <img src="https://picsum.photos/seed/medical-care/1200/600" class="w-full h-auto rounded-[2.5rem]" referrerPolicy="no-referrer">
+                    </div>
+                </section>
+
+                <!-- Steps to Control -->
+                <section class="slide-up">
+                    <h2 class="text-3xl font-bold text-slate-900 mb-12">خطوات للتحكم في ضغط الدم</h2>
+                    <div class="space-y-8">
+                        <div class="flex gap-8 p-8 border border-medical-blue-light rounded-3xl hover:bg-medical-blue-light/10 transition-colors group">
+                            <div class="bg-white p-5 rounded-2xl shadow-sm h-fit"><i data-lucide="droplets" class="text-medical-blue"></i></div>
+                            <div>
+                                <h4 class="text-xl font-bold text-slate-900 mb-2">تقليل استهلاك الملح</h4>
+                                <p class="text-slate-600 leading-relaxed text-lg text-justify italic font-medium">الملح يحبس السوائل في الجسم مما يزيد من ضغط الدم. حاول ألا يتجاوز استهلاكك ملعقة صغيرة يومياً.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-8 p-8 border border-medical-blue-light rounded-3xl hover:bg-medical-blue-light/10 transition-colors group">
+                            <div class="bg-white p-5 rounded-2xl shadow-sm h-fit"><i data-lucide="waves" class="text-medical-blue"></i></div>
+                            <div>
+                                <h4 class="text-xl font-bold text-slate-900 mb-2">إدارة التوتر والضغوط</h4>
+                                <p class="text-slate-600 leading-relaxed text-lg text-justify italic font-medium">التنفس العميق، التأمل، ونيل قسط كافٍ من النوم يساعد بشكل مباشر في استرخاء الأوعية الدموية.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="bg-slate-900 p-16 rounded-[4rem] text-center text-white slide-up">
+                    <i data-lucide="play-circle" class="w-20 h-20 text-medical-blue-light mx-auto mb-8"></i>
+                    <h2 class="text-3xl font-bold mb-6">فيديو: مخاطر إهمال ضغط الدم</h2>
+                    <p class="text-slate-300 mb-12 max-w-2xl mx-auto text-lg leading-relaxed">تعرف على كيفية حماية قلبك وشرايينك من خلال هذا الفيديو التوضيحي الشامل لتمارس حياتك بأمان.</p>
+                    <div class="aspect-video bg-white/5 border-4 border-dashed border-white/10 rounded-[2.5rem] flex items-center justify-center relative group cursor-pointer overflow-hidden">
+                        <span class="text-slate-500 font-bold group-hover:text-white transition-colors">فيديو توعوي سيظهر هنا</span>
+                        <div class="absolute inset-0 bg-white/0 group-hover:bg-white/5 transition-all"></div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="space-y-10">
+                <div class="bg-medical-blue text-white p-12 rounded-[3rem] shadow-2xl shadow-medical-blue/30 sticky top-28">
+                    <i data-lucide="info" class="w-12 h-12 mb-8 opacity-80"></i>
+                    <h3 class="text-2xl font-bold mb-6">هل تعلم؟</h3>
+                    <p class="text-medical-blue-light leading-relaxed text-lg mb-10">
+                        فقدان كيلوغرامات قليلة من الوزن الزائد يمكن أن يقلل ضغط الدم بمقدار نقطة واحدة لكل كيلوغرام يتم فقده.
+                    </p>
+                    <div class="h-0.5 bg-white/20 w-full mb-8"></div>
+                    <p class="italic text-white opacity-80">"الصحة تاج على رؤوس الأصحاء"</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-medical-grey border-t border-medical-teal-light py-20 mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-slate-500 font-medium">© 2026 صحة مجتمع. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        document.getElementById('menu-btn').onclick = () => document.getElementById('mobile-menu').classList.toggle('hidden');
+    </script>
+</body>
+</html>
