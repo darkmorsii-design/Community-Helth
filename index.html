@@ -36,14 +36,24 @@
     </script>
     <style>
         body { font-family: 'Tajawal', sans-serif; scroll-behavior: smooth; }
-        .fade-in { animation: fadeIn 0.8s ease-out forwards; opacity: 0; }
-        .slide-up { animation: slideUp 0.8s ease-out forwards; opacity: 0; }
+        .fade-in { animation: fadeIn 0.8s ease-out forwards; opacity: 0; will-change: opacity; }
+        .slide-up { animation: slideUp 0.8s ease-out forwards; opacity: 0; will-change: transform, opacity; }
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
         @keyframes slideUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
-        .hover-lift { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .hover-lift { transition: transform 0.3s ease, box-shadow 0.3s ease; will-change: transform; }
         .hover-lift:hover { transform: translateY(-10px); }
-        .floating { animation: float 4s ease-in-out infinite; }
-        @keyframes float { 0% { transform: translateY(0px); } 50% { transform: translateY(-15px); } 100% { transform: translateY(0px); } }
+
+        /* Mobile Menu Animation */
+        #mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+            opacity: 0;
+        }
+        #mobile-menu.menu-open {
+            max-height: 400px;
+            opacity: 1;
+        }
     </style>
 </head>
 <body class="bg-white text-slate-800 antialiased selection:bg-medical-teal-light selection:text-medical-teal-dark">
@@ -85,7 +95,7 @@
         </div>
 
         <!-- Mobile menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-medical-teal-light overflow-hidden transition-all">
+        <div id="mobile-menu" class="md:hidden bg-white border-b border-medical-teal-light">
             <div class="px-4 pt-2 pb-6 space-y-1">
                 <a href="index.html" class="block px-3 py-4 rounded-lg text-base font-medium bg-medical-teal-light text-medical-teal">الرئيسية</a>
                 <a href="#medical-content" class="block px-3 py-4 rounded-lg text-base font-medium text-slate-600 hover:bg-medical-grey transition-colors">المحتوي الطبي</a>
@@ -95,15 +105,15 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="relative min-h-[90vh] flex items-center overflow-hidden">
-        <!-- Background Image with Blur -->
+    <section class="relative min-h-[90vh] flex items-center overflow-hidden bg-slate-900">
+        <!-- Background Image with Optimized Blur -->
         <div class="absolute inset-0 z-0">
-            <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=1920" 
+            <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=70&w=1280" 
                  alt="Medical Office Background" 
-                 class="w-full h-full object-cover blur-md scale-105" 
+                 class="w-full h-full object-cover blur-[2px] opacity-60" 
                  referrerPolicy="no-referrer">
-            <!-- Light Medical Overlay -->
-            <div class="absolute inset-0 bg-slate-950/40 backdrop-blur-[3px]"></div>
+            <!-- Dark Overlay with minimal blur -->
+            <div class="absolute inset-0 bg-slate-950/30 backdrop-blur-[1px]"></div>
         </div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-32">
@@ -161,6 +171,94 @@
         </div>
     </section>
 
+    <!-- Social Awareness Section -->
+    <section id="social-awareness" class="bg-slate-50 py-32 border-y border-medical-teal-light/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-20 slide-up">
+                <h2 class="text-3xl md:text-5xl font-bold text-slate-900 mb-6">التوعية بالظواهر الاجتماعية</h2>
+                <p class="text-slate-600 leading-relaxed text-lg">
+                    الصحة ليست جسدية فقط، بل نفسية واجتماعية أيضاً. نسلط الضوء على أهم القضايا التي تؤثر على تماسك المجتمع وصحة أفراده.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Bullying -->
+                <div class="bg-white p-8 rounded-3xl border border-medical-teal-light/50 hover:border-medical-teal transition-all hover:shadow-xl group slide-up">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="p-4 bg-orange-50 rounded-2xl group-hover:bg-orange-100 transition-colors">
+                            <i data-lucide="shield-off" class="w-6 h-6 text-orange-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900">التنمر</h3>
+                    </div>
+                    <p class="text-slate-600 leading-relaxed">فهم أشكال التنمر وآثاره النفسية العميقة وكيفية بناء بيئة آمنة وداعمة للجميع.</p>
+                </div>
+
+                <!-- Addiction -->
+                <div class="bg-white p-8 rounded-3xl border border-medical-teal-light/50 hover:border-medical-teal transition-all hover:shadow-xl group slide-up" style="animation-delay: 0.1s;">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="p-4 bg-red-50 rounded-2xl group-hover:bg-red-100 transition-colors">
+                            <i data-lucide="alert-triangle" class="w-6 h-6 text-red-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900">الإدمان</h3>
+                    </div>
+                    <p class="text-slate-600 leading-relaxed">التوعية بمخاطر الإدمان السلوكي والمادي وسبل الوقاية والتعافي والعودة للحياة الطبيعية.</p>
+                </div>
+
+                <!-- Domestic Violence -->
+                <div class="bg-white p-8 rounded-3xl border border-medical-teal-light/50 hover:border-medical-teal transition-all hover:shadow-xl group slide-up" style="animation-delay: 0.2s;">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="p-4 bg-purple-50 rounded-2xl group-hover:bg-purple-100 transition-colors">
+                            <i data-lucide="home" class="w-6 h-6 text-purple-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900">العنف الأسري</h3>
+                    </div>
+                    <p class="text-slate-600 leading-relaxed">تعزيز الروابط الأسرية الصحية والتعريف بحقوق الأفراد وكيفية التعامل مع النزاعات بسلام.</p>
+                </div>
+
+                <!-- Suicide Prevention -->
+                <div class="bg-white p-8 rounded-3xl border border-medical-teal-light/50 hover:border-medical-teal transition-all hover:shadow-xl group slide-up" style="animation-delay: 0.3s;">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="p-4 bg-blue-50 rounded-2xl group-hover:bg-blue-100 transition-colors">
+                            <i data-lucide="life-buoy" class="w-6 h-6 text-blue-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900">الصحة النفسية</h3>
+                    </div>
+                    <p class="text-slate-600 leading-relaxed">نشر الوعي حول الاكتئاب ومنع الانتحار، وتوفير الدعم النفسي لمن يمرون بأزمات حادة.</p>
+                </div>
+
+                <!-- Pornography Awareness -->
+                <div class="bg-white p-8 rounded-3xl border border-medical-teal-light/50 hover:border-medical-teal transition-all hover:shadow-xl group slide-up" style="animation-delay: 0.4s;">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="p-4 bg-indigo-50 rounded-2xl group-hover:bg-indigo-100 transition-colors">
+                            <i data-lucide="eye-off" class="w-6 h-6 text-indigo-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900">مخاطر الإباحية</h3>
+                    </div>
+                    <p class="text-slate-600 leading-relaxed">التوعية بالآثار السلبية للمحتوى الإباحي على الدماغ والعلاقات الاجتماعية وسبل التحرر منها.</p>
+                </div>
+
+                <!-- Divorce -->
+                <div class="bg-white p-8 rounded-3xl border border-medical-teal-light/50 hover:border-medical-teal transition-all hover:shadow-xl group slide-up" style="animation-delay: 0.5s;">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="p-4 bg-amber-50 rounded-2xl group-hover:bg-amber-100 transition-colors">
+                            <i data-lucide="split" class="w-6 h-6 text-amber-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900">الطلاق وآثاره</h3>
+                    </div>
+                    <p class="text-slate-600 leading-relaxed">فهم أسباب الطلاق وكيفية حماية الأطفال من تداعياته وبناء حياة جديدة مستقرة بعد الانفصال.</p>
+                </div>
+            </div>
+
+            <!-- View More Button -->
+            <div class="mt-16 text-center slide-up" style="animation-delay: 0.6s;">
+                <a href="#" class="inline-flex items-center gap-3 px-10 py-5 bg-white text-medical-teal rounded-2xl font-bold hover:bg-medical-teal-light hover:text-medical-teal-dark transition-all duration-300 shadow-xl group">
+                    رؤية المزيد من المواضيع
+                    <i data-lucide="arrow-left" class="w-5 h-5 group-hover:-translate-x-1 transition-transform"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
     <!-- Call to Action Banner -->
     <section id="medical-content" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-32">
         <div class="bg-medical-teal rounded-[3rem] p-12 md:p-20 text-center text-white relative overflow-hidden shadow-2xl">
@@ -176,7 +274,7 @@
                     <a href="diabetes.html" class="px-10 py-5 bg-white text-medical-teal rounded-2xl font-bold hover:bg-medical-teal-light hover:text-medical-teal-dark transition-all duration-300 shadow-xl">
                         دليل مرض السكري
                     </a>
-                    <a href="hypertension.html" class="px-10 py-5 bg-medical-teal-dark text-white border border-white/20 rounded-2xl font-bold hover:bg-white hover:text-medical-teal-dark transition-all duration-300">
+                    <a href="hypertension.html" class="px-10 py-5 bg-white text-medical-teal rounded-2xl font-bold hover:bg-medical-teal-light hover:text-medical-teal-dark transition-all duration-300 shadow-xl">
                         دليل ضغط الدم
                     </a>
                 </div>
@@ -246,14 +344,29 @@
         // Responsive Menu Toggle
         const menuBtn = document.getElementById('menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
-        const menuIcon = document.getElementById('menu-icon');
         
         let isOpen = false;
         menuBtn.addEventListener('click', () => {
             isOpen = !isOpen;
-            mobileMenu.classList.toggle('hidden');
-            menuIcon.setAttribute('data-lucide', isOpen ? 'x' : 'menu');
-            lucide.createIcons(); // Re-render icon
+            mobileMenu.classList.toggle('menu-open');
+            const icon = menuBtn.querySelector('[data-lucide]');
+            if (icon) {
+                icon.setAttribute('data-lucide', isOpen ? 'x' : 'menu');
+                lucide.createIcons();
+            }
+        });
+
+        // Close menu when a link is clicked
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('menu-open');
+                isOpen = false;
+                const icon = menuBtn.querySelector('[data-lucide]');
+                if (icon) {
+                    icon.setAttribute('data-lucide', 'menu');
+                    lucide.createIcons();
+                }
+            });
         });
     </script>
 </body>

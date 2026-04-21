@@ -20,8 +20,20 @@
     </script>
     <style>
         body { font-family: 'Tajawal', sans-serif; }
-        .slide-up { animation: slideUp 0.6s ease-out forwards; opacity: 0; }
+        .slide-up { animation: slideUp 0.6s ease-out forwards; opacity: 0; will-change: transform, opacity; }
         @keyframes slideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* Mobile Menu Animation */
+        #mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+            opacity: 0;
+        }
+        #mobile-menu.menu-open {
+            max-height: 400px;
+            opacity: 1;
+        }
     </style>
 </head>
 <body class="bg-white text-slate-800 antialiased font-sans">
@@ -44,7 +56,7 @@
                 <div class="md:hidden flex items-center"><button id="menu-btn" class="p-2"><i data-lucide="menu" class="w-6 h-6"></i></button></div>
             </div>
         </div>
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-medical-teal-light">
+        <div id="mobile-menu" class="md:hidden bg-white border-b border-medical-teal-light">
             <div class="px-4 py-6 space-y-2">
                 <a href="index.html" class="block p-4 rounded-lg">الرئيسية</a>
                 <a href="index.html#medical-content" class="block p-4 rounded-lg">المحتوي الطبي</a>
@@ -89,7 +101,7 @@
 
                 <section class="slide-up" style="animation-delay: 0.2s;">
                     <div class="rounded-[3rem] overflow-hidden shadow-2xl h-[500px] border-4 border-medical-teal-light/20">
-                        <img src="https://picsum.photos/seed/medical-monitor/1200/800" class="w-full h-full object-cover" referrerPolicy="no-referrer">
+                        <img src="https://picsum.photos/seed/medical-monitor/1000/600" class="w-full h-full object-cover" loading="lazy" referrerPolicy="no-referrer">
                     </div>
                     <p class="text-center mt-6 italic text-slate-500">فحص سكر الدم المنتظم هو الخطوة الأولى للإدارة السليمة للمرض.</p>
                 </section>
@@ -144,7 +156,31 @@
 
     <script>
         lucide.createIcons();
-        document.getElementById('menu-btn').onclick = () => document.getElementById('mobile-menu').classList.toggle('hidden');
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        let isOpen = false;
+        menuBtn.onclick = () => {
+            isOpen = !isOpen;
+            mobileMenu.classList.toggle('menu-open');
+            const icon = menuBtn.querySelector('[data-lucide]');
+            if (icon) {
+                icon.setAttribute('data-lucide', isOpen ? 'x' : 'menu');
+                lucide.createIcons();
+            }
+        };
+
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.onclick = () => {
+                mobileMenu.classList.remove('menu-open');
+                isOpen = false;
+                const icon = menuBtn.querySelector('[data-lucide]');
+                if (icon) {
+                    icon.setAttribute('data-lucide', 'menu');
+                    lucide.createIcons();
+                }
+            };
+        });
     </script>
 </body>
 </html>
