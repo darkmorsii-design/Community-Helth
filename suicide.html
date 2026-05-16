@@ -51,145 +51,368 @@
 </head>
 <body class="bg-white text-slate-800 antialiased font-sans">
 
-    <!-- Nav (Shared) -->
+    <!-- Navigation -->
     <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-medical-teal-light">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20">
                 <div class="flex items-center">
-                    <a href="index.html" class="flex items-center gap-2 group">
-                        <div class="bg-medical-teal-light p-2 rounded-lg group-hover:bg-medical-teal transition-colors"><i data-lucide="compass" class="w-6 h-6 text-medical-teal group-hover:text-white"></i></div>
+                    <a href="index.html" class="flex items-center gap-2 group transition-all">
+                        <div class="bg-medical-teal-light p-2 rounded-lg group-hover:bg-medical-teal transition-colors">
+                            <i data-lucide="compass" class="w-6 h-6 text-medical-teal group-hover:text-white"></i>
+                        </div>
                         <span class="text-xl font-bold text-medical-teal-dark tracking-tight">بوصلة صحة المجتمع</span>
                     </a>
                 </div>
+
+                <!-- Desktop Links -->
                 <div class="hidden md:flex items-center gap-8 font-medium">
-                    <a href="index.html" class="text-slate-600 hover:text-medical-teal transition-colors">الرئيسية</a>
-                    <a href="index.html#health-topics" class="text-slate-600 hover:text-medical-teal transition-colors">المحتوي الطبي</a>
-                    <a href="index.html#social-awareness" class="text-slate-600 hover:text-medical-teal transition-colors">قضايا اجتماعية</a>
-                    <a href="index.html#footer" class="text-slate-600 hover:text-medical-teal transition-colors">من نحن</a>
+                    <a href="index.html" class="text-slate-600 hover:text-medical-teal transition-colors relative group">
+                        الرئيسية
+                    </a>
+                    <a href="index.html#health-topics" class="text-slate-600 hover:text-medical-teal transition-colors relative group">
+                        الموضوعات الصحية
+                    </a>
+                    <a href="index.html#social-awareness" class="text-slate-600 hover:text-medical-teal transition-colors relative group">
+                        الموضوعات الاجتماعية
+                    </a>
                 </div>
-                <div class="md:hidden flex items-center"><button id="menu-btn" class="p-2"><i data-lucide="menu" class="w-6 h-6"></i></button></div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn" class="text-slate-600 hover:text-medical-teal p-2 focus:outline-none">
+                        <i data-lucide="menu" id="menu-icon" class="w-6 h-6"></i>
+                    </button>
+                </div>
             </div>
         </div>
+
+        <!-- Mobile menu -->
         <div id="mobile-menu" class="md:hidden bg-white border-b border-medical-teal-light">
-            <div class="px-4 py-6 space-y-2">
-                <a href="index.html" class="block p-4 rounded-md">الرئيسية</a>
-                <a href="index.html#health-topics" class="block p-4 rounded-md">المحتوي الطبي</a>
-                <a href="index.html#social-awareness" class="block p-4 rounded-md">قضايا اجتماعية</a>
-                <a href="index.html#footer" class="block p-4 rounded-md">من نحن</a>
+            <div class="px-4 pt-2 pb-6 space-y-1">
+                <a href="index.html" class="block px-3 py-4 rounded-md text-base font-medium text-slate-600 hover:bg-medical-grey transition-colors">الرئيسية</a>
+                <a href="index.html#health-topics" class="block px-3 py-4 rounded-md text-base font-medium text-slate-600 hover:bg-medical-grey transition-colors">الموضوعات الصحية</a>
+                <a href="index.html#social-awareness" class="block px-3 py-4 rounded-md text-base font-medium text-slate-600 hover:bg-medical-grey transition-colors">الموضوعات الاجتماعية</a>
             </div>
         </div>
     </nav>
 
     <!-- Page Header -->
-    <header class="bg-emerald-50 py-24 border-b border-emerald-100">
+    <header class="bg-indigo-50 py-24 border-b border-indigo-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center slide-up">
-            <h1 class="text-4xl md:text-6xl font-bold text-emerald-800 mb-6 font-primary">الوقاية من الانتحار: كل حياة غالية</h1>
-            <p class="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">دليل توعوي لتعزيز الصحة النفسية، فهم علامات الخطر، وكيفية توفير الدعم للأشخاص في الأوقات الصعبة لإنقاذ الأرواح.</p>
+            <span class="inline-block px-4 py-1.5 rounded-full bg-indigo-100 text-indigo-600 text-sm font-bold mb-6">الدعم النفسي</span>
+            <h1 class="text-4xl md:text-6xl font-bold text-indigo-900 mb-6 font-primary leading-tight">أنتَ لستَ وحدك</h1>
+            <p class="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+                لا بأس ألا تكون بخير. هذه الصفحة هنا لتساعدك على فهم ما تشعر به وكيف يمكننا مساعدتك.
+            </p>
         </div>
     </header>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-16">
-            <!-- Content -->
-            <div class="lg:col-span-2 space-y-20 text-right">
+        <div class="max-w-5xl mx-auto space-y-24 text-right">
+            <!-- Main Content -->
+            <div class="space-y-24 text-right">
+                
+                <!-- What is suicide? -->
                 <section class="slide-up">
-                    <h2 class="text-3xl font-bold text-slate-900 mb-8 flex items-center gap-4">
-                        <i data-lucide="heart-pulse" class="w-8 h-8 text-emerald-600"></i> لماذا نتحدث عن الانتحار؟
-                    </h2>
-                    <div class="text-lg text-slate-600 leading-[1.8] space-y-6">
-                        <p>الصمت هو أكبر عدو للصحة النفسية. الحديث عن الانتحار بوعي ومسؤولية يقلل من الوصمة الاجتماعية ويفتح أبواب الأمل للباحثين عن مساعدة. تذكر أن الشعور باليأس هو حالة مؤقتة يمكن تجاوزها بالدعم المناسب.</p>
-                        <div class="bg-medical-grey p-10 rounded-xl border border-emerald-100">
-                            <h3 class="font-bold text-emerald-800 mb-6 text-xl underline decoration-2 underline-offset-8 decoration-emerald-200">علامات الخطر التي يجب الانتباه لها:</h3>
-                            <div class="space-y-6">
-                                <div class="flex gap-4">
-                                    <div class="bg-emerald-600 text-white w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 font-bold">١</div>
-                                    <p><span class="font-bold text-slate-900 text-lg">التعبيرات اللفظية:</span> الحديث المتكرر عن الرغبة في الموت، الشعور بالفراغ، أو كونه عبئاً على الآخرين.</p>
-                                </div>
-                                <div class="flex gap-4">
-                                    <div class="bg-emerald-600 text-white w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 font-bold">٢</div>
-                                    <p><span class="font-bold text-slate-900 text-lg">التغيرات السلوكية:</span> الانسحاب الاجتماعي التام، تقلبات مزاجية حادة، أو التخلص من المقتنيات الثمينة فجأة.</p>
-                                </div>
-                            </div>
+                    <div class="flex items-center gap-4 mb-10 border-r-4 border-indigo-600 pr-6">
+                        <h2 class="text-3xl font-bold text-slate-900">ماذا يعني الانتحار؟</h2>
+                    </div>
+                    <div class="bg-white p-10 rounded-2xl border border-indigo-100 shadow-sm space-y-6">
+                        <p class="text-xl text-slate-700 leading-relaxed">
+                            الانتحار يحدث عندما يشعر الشخص بألم نفسي شديد لدرجة أنه يفكر في إنهاء حياته. هذا لا يعني أنك ضعيف، ولا أنك شخص سيء، بل يعني أنك تعاني وتحتاج إلى دعم.
+                        </p>
+                        <div class="bg-indigo-600 text-white p-8 rounded-xl shadow-lg relative overflow-hidden">
+                            <div class="absolute top-0 left-0 w-24 h-24 bg-white/10 rounded-full -translate-x-12 -translate-y-12"></div>
+                            <p class="text-2xl font-bold italic relative z-10">"معظم من يشعرون بهذا لا يريدون الموت حقاً. هم يريدون أن يتوقف الألم، وهذا شيء نستطيع مساعدتك فيه."</p>
                         </div>
                     </div>
                 </section>
 
-                <section class="slide-up" style="animation-delay: 0.2s;">
-                    <div class="rounded-2xl overflow-hidden shadow-2xl h-[500px] border-4 border-emerald-50">
-                        <img src="https://images.unsplash.com/photo-1518391846015-55a9cc00ddb5?auto=format&fit=crop&q=80&w=1280" class="w-full h-full object-cover" loading="lazy" referrerPolicy="no-referrer">
+                <!-- How you feel? -->
+                <section class="slide-up">
+                    <div class="flex items-center gap-4 mb-10 border-r-4 border-indigo-600 pr-6">
+                        <h2 class="text-3xl font-bold text-slate-900">كيف قد تشعر؟</h2>
                     </div>
-                    <p class="text-center mt-6 italic text-slate-500">أنت لست وحدك، والحديث مع شخص تثق به قد يكون بداية طريق النجاة.</p>
-                </section>
-
-                <section class="slide-up" style="animation-delay: 0.3s;">
-                    <h2 class="text-3xl font-bold text-slate-900 mb-8 flex items-center gap-4">
-                        <i data-lucide="hand-metal" class="w-8 h-8 text-medical-blue"></i> كيف تساعد شخصاً في خطر؟
-                    </h2>
+                    <p class="text-lg text-slate-600 mb-10">إذا كنت تمر بأي من هذه المشاعر، فأنت لستَ وحيداً والمساعدة متاحة:</p>
+                    
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <div class="bg-blue-50 p-8 rounded-xl border border-blue-100">
-                            <h4 class="font-bold text-blue-900 mb-3 text-xl">١. اسأل مباشرة</h4>
-                            <p class="text-slate-600">لا تخف من سؤال الشخص عما إذا كان يفكر في الانتحار؛ هذا السؤال يظهر اهتمامك العميق.</p>
+                        <div class="space-y-6">
+                            <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200">
+                                <h4 class="font-bold text-indigo-900 mb-4 flex items-center gap-2">
+                                    <i data-lucide="heart" class="w-5 h-5"></i> عاطفياً:
+                                </h4>
+                                <ul class="space-y-3 text-slate-600 text-sm">
+                                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-indigo-600 rounded-full"></span> الشعور باليأس، كأن الأمور لن تتحسن أبداً</li>
+                                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-indigo-600 rounded-full"></span> الشعور بأنك عبء على من حولك</li>
+                                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-indigo-600 rounded-full"></span> حزن عميق، أو فراغ داخلي، أو تخدر تام</li>
+                                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-indigo-600 rounded-full"></span> الشعور بأنك محاصر ولا يوجد مخرج</li>
+                                </ul>
+                            </div>
+                            <div class="bg-indigo-50 p-8 rounded-2xl border border-indigo-100">
+                                <h4 class="font-bold text-indigo-900 mb-4 flex items-center gap-2">
+                                    <i data-lucide="brain" class="w-5 h-5"></i> في أفكارك:
+                                </h4>
+                                <ul class="space-y-3 text-slate-600 text-sm">
+                                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-indigo-600 rounded-full"></span> "الجميع سيكون أفضل بدوني"</li>
+                                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-indigo-600 rounded-full"></span> التمني لو تختفي أو لا تصحو من النوم</li>
+                                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-indigo-600 rounded-full"></span> الإحساس بأنه لا معنى للمستقبل</li>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="bg-blue-50 p-8 rounded-xl border border-blue-100">
-                            <h4 class="font-bold text-blue-900 mb-3 text-xl">٢. استمع بإنصات</h4>
-                            <p class="text-slate-600">استمع دون إلقاء أحكام أو نصائح فورية، فقط دع الشخص يعبر عما يمر به من ألم.</p>
+                        <div class="space-y-6">
+                            <div class="bg-indigo-50 p-8 rounded-2xl border border-indigo-100">
+                                <h4 class="font-bold text-indigo-900 mb-4 flex items-center gap-2">
+                                    <i data-lucide="user-x" class="w-5 h-5"></i> في تصرفاتك:
+                                </h4>
+                                <ul class="space-y-3 text-slate-600 text-sm">
+                                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-indigo-600 rounded-full"></span> الابتعاد عن العائلة والأصدقاء</li>
+                                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-indigo-600 rounded-full"></span> فقدان الاهتمام بأشياء كنت تحبها</li>
+                                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-indigo-600 rounded-full"></span> النوم الزائد أو عدم القدرة على النوم</li>
+                                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-indigo-600 rounded-full"></span> اللجوء للكحول أو المواد للتعامل مع الألم</li>
+                                </ul>
+                            </div>
+                            <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200">
+                                <h4 class="font-bold text-indigo-900 mb-4 flex items-center gap-2">
+                                    <i data-lucide="activity" class="w-5 h-5"></i> جسدياً:
+                                </h4>
+                                <ul class="space-y-3 text-slate-600 text-sm">
+                                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-indigo-600 rounded-full"></span> التعب المستمر وانعدام الطاقة</li>
+                                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-indigo-600 rounded-full"></span> تغير في الشهية - أكل كثير أو قليل جداً</li>
+                                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-indigo-600 rounded-full"></span> إهمال النظافة الشخصية والعناية بالنفس</li>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="bg-blue-50 p-8 rounded-xl border border-blue-100">
-                            <h4 class="font-bold text-blue-900 mb-3 text-xl">٣. لا تتركه بمفرده</h4>
-                            <p class="text-slate-600">إذا شعرت أن الخطر وشيك، ابقَ مع الشخص أو اطلب من شخص آخر التواجد معه.</p>
+                    </div>
+                    <div class="mt-8 p-6 bg-indigo-900 text-white rounded-xl text-center shadow-xl">
+                        <p class="text-xl font-bold">إذا كان أي من هذا يشبه ما تشعر به فقط أخبرنا. لا تحتاج أن تشرح كل شيء بشكل مثالي. فقط قل: "لستُ بخير."</p>
+                    </div>
+                </section>
+
+                <!-- What the nurse can do? -->
+                <section class="slide-up">
+                    <div class="flex items-center gap-4 mb-10 border-r-4 border-indigo-600 pr-6">
+                        <h2 class="text-3xl font-bold text-slate-900">ماذا تستطيع الممرضة أن تفعل لك؟</h2>
+                    </div>
+                    <p class="text-lg text-slate-600 mb-10 leading-relaxed">الممرضة ليست هنا فقط لصحتك الجسدية. إنها مدربة على دعم صحتك النفسية أيضاً. إليك كيف تساعدك تحديداً:</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-6 p-8 bg-white rounded-2xl border border-indigo-50 shadow-sm transition-all hover:shadow-md">
+                            <div class="w-14 h-14 bg-indigo-100 rounded-xl flex items-center justify-center shrink-0">
+                                <i data-lucide="eye" class="w-7 h-7 text-indigo-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-900 mb-2">تلاحظ</h3>
+                                <p class="text-slate-600">الممرضة تنتبه لتغيرات مزاجك وسلوكك، حتى في الأيام التي لا تقول فيها شيئاً. هي مدربة على رؤية العلامات.</p>
+                            </div>
                         </div>
-                        <div class="bg-blue-50 p-8 rounded-xl border border-blue-100">
-                            <h4 class="font-bold text-blue-900 mb-3 text-xl">٤. وجّهه للمساعدة</h4>
-                            <p class="text-slate-600">ساعده في الوصول إلى متخصص نفسي أو طبيب، أو تواصل مع أرقام الطوارئ المخصصة.</p>
+                        <div class="flex items-start gap-6 p-8 bg-white rounded-2xl border border-indigo-50 shadow-sm transition-all hover:shadow-md">
+                            <div class="w-14 h-14 bg-indigo-100 rounded-xl flex items-center justify-center shrink-0">
+                                <i data-lucide="ear" class="w-7 h-7 text-indigo-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-900 mb-2">تسمع</h3>
+                                <p class="text-slate-600">تستطيع التحدث إلى ممرضتك دون خوف من الحكم أو النقد. كل ما تشاركه يُستخدم فقط لمساعدتك.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-6 p-8 bg-white rounded-2xl border border-indigo-50 shadow-sm transition-all hover:shadow-md">
+                            <div class="w-14 h-14 bg-indigo-100 rounded-xl flex items-center justify-center shrink-0">
+                                <i data-lucide="shield-check" class="w-7 h-7 text-indigo-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-900 mb-2">تحميك</h3>
+                                <p class="text-slate-600">إذا كنت في لحظة صعبة، ستبقى الممرضة قريبة منك، تتأكد من سلامة بيئتك، ولن تتركك وحيداً.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-6 p-8 bg-white rounded-2xl border border-indigo-50 shadow-sm transition-all hover:shadow-md">
+                            <div class="w-14 h-14 bg-indigo-100 rounded-xl flex items-center justify-center shrink-0">
+                                <i data-lucide="users" class="w-7 h-7 text-indigo-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-900 mb-2">توصلك بالمساعدة المناسبة</h3>
+                                <p class="text-slate-600">تعمل الممرضة مع الأطباء والمعالجين النفسيين والأخصائيين الاجتماعيين لتحصل على الدعم الصحيح.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-6 p-8 bg-white rounded-2xl border border-indigo-50 shadow-sm transition-all hover:shadow-md">
+                            <div class="w-14 h-14 bg-indigo-100 rounded-xl flex items-center justify-center shrink-0">
+                                <i data-lucide="refresh-cw" class="w-7 h-7 text-indigo-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-900 mb-2">تتابع حالتك</h3>
+                                <p class="text-slate-600">التعافي لا يحدث بين ليلة وضحاها. الممرضة ستتابعك بانتظام وتعدّل خطة علاجك حسب تطورك.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-6 p-8 bg-white rounded-2xl border border-indigo-50 shadow-sm transition-all hover:shadow-md">
+                            <div class="w-14 h-14 bg-indigo-100 rounded-xl flex items-center justify-center shrink-0">
+                                <i data-lucide="heart-handshake" class="w-7 h-7 text-indigo-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-900 mb-2">تبقى معك</h3>
+                                <p class="text-slate-600">من اللحظة التي تفتح فيها قلبك، حتى اللحظة التي تشعر فيها بتحسن، الممرضة معك في كل خطوة.</p>
+                            </div>
                         </div>
                     </div>
                 </section>
-            </div>
 
-            <!-- Sidebar -->
-            <div class="space-y-10 shrink-0">
-                <div class="bg-white p-10 rounded-xl border border-emerald-100 shadow-xl sticky top-28 text-right">
-                    <h3 class="text-2xl font-bold text-emerald-800 mb-10 pb-4 border-b border-emerald-100">أرقام الأمل</h3>
-                    <div class="space-y-10">
-                        <div class="flex gap-5">
-                            <div class="bg-emerald-50 p-4 rounded-lg"><i data-lucide="phone" class="text-emerald-700"></i></div>
-                            <div>
-                                <h4 class="font-bold text-slate-900 mb-1">الخط الساخن للأمان النفسي</h4>
-                                <p class="text-2xl font-bold text-emerald-700">08008880700</p>
-                                <p class="text-sm text-slate-500">مصر - متاح مجاناً</p>
-                            </div>
+                <!-- Steps -->
+                <section class="slide-up">
+                    <div class="flex items-center gap-4 mb-10 border-r-4 border-indigo-600 pr-6">
+                        <h2 class="text-3xl font-bold text-slate-900">خطوة واحدة تكفي</h2>
+                    </div>
+                    <p class="text-lg text-slate-600 mb-10 leading-relaxed">لا تحتاج أن تملك كل الإجابات. تحتاج فقط أن تتخذ خطوة واحدة.</p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                        <div class="p-8 rounded-2xl bg-indigo-50 border border-indigo-100 shadow-sm group hover:bg-slate-900 transition-all duration-300">
+                            <div class="bg-indigo-600 w-12 h-12 rounded-full flex items-center justify-center text-white font-bold mx-auto mb-6 group-hover:scale-110 transition-transform">١</div>
+                            <h4 class="font-bold text-indigo-900 group-hover:text-medical-teal mb-4 text-xl">الخطوة الأولى: قل شيئا</h4>
+                            <p class="text-sm text-slate-600 group-hover:text-slate-300">أخبر ممرضتك أو أي أحد من فريق رعايتك: "أحتاج مساعدة" أو "لستُ بخير". هذا يكفي للبداية.</p>
                         </div>
-                        <div class="flex gap-5">
-                            <div class="bg-medical-teal-light p-4 rounded-lg"><i data-lucide="life-buoy" class="text-medical-teal"></i></div>
-                            <div>
-                                <h4 class="font-bold text-slate-900 mb-1">طوارئ الصحة النفسية</h4>
-                                <p class="text-xl font-bold text-medical-teal">0220816831</p>
-                            </div>
+                        <div class="p-8 rounded-2xl bg-indigo-50 border border-indigo-100 shadow-sm group hover:bg-slate-900 transition-all duration-300">
+                            <div class="bg-indigo-600 w-12 h-12 rounded-full flex items-center justify-center text-white font-bold mx-auto mb-6 group-hover:scale-110 transition-transform">٢</div>
+                            <h4 class="font-bold text-indigo-900 group-hover:text-medical-teal mb-4 text-xl">الخطوة الثانية: لا تكن وحيدا</h4>
+                            <p class="text-sm text-slate-600 group-hover:text-slate-300">إذا كنت تشعر بضغط شديد الآن، ابقَ قرب شخص ما. لا تحتاج للحديث — فقط لا تكن وحيداً.</p>
+                        </div>
+                        <div class="p-8 rounded-2xl bg-indigo-50 border border-indigo-100 shadow-sm group hover:bg-slate-900 transition-all duration-300 text-center">
+                            <div class="bg-indigo-600 w-12 h-12 rounded-full flex items-center justify-center text-white font-bold mx-auto mb-6 group-hover:scale-110 transition-transform">٣</div>
+                            <h4 class="font-bold text-indigo-900 group-hover:text-medical-teal mb-4 text-xl">الخطوة الثالثة: ثق بنا</h4>
+                            <p class="text-sm text-slate-600 group-hover:text-slate-300">فريق رعايتك ساعد أشخاصاً كثيرين مروا بنفس ما تمر به. المساعدة تنجح.</p>
                         </div>
                     </div>
-                    <div class="mt-12 bg-emerald-700 text-white p-8 rounded-xl text-center shadow-lg">
-                        <p class="text-sm mb-4 font-medium opacity-90">هناك دائماً أمل، تذكر ذلك جيداً</p>
-                        <a href="mailto:Example@gmail.com" class="font-bold border-b-2 border-white/50 hover:border-white transition-all text-lg">نحن هنا للاستماع إليك</a>
+
+                    <div class="mt-12 bg-red-600 text-white p-10 rounded-2xl shadow-2xl slide-up text-center relative overflow-hidden">
+                        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20"></div>
+                        <div class="relative z-10">
+                            <i data-lucide="megaphone" class="w-12 h-12 mx-auto mb-6 animate-pulse"></i>
+                            <h3 class="text-2xl font-bold mb-4">إذا شعرت أنك قد تؤذي نفسك الآن:</h3>
+                            <p class="text-xl">أخبر ممرضتك فوراً، أو اضغط زر الاستدعاء، أو اذهب إلى أقرب محطة تمريض. أنتَ في المكان الصحيح. المساعدة هنا.</p>
+                        </div>
                     </div>
-                </div>
+                </section>
+
+                <!-- Misconceptions -->
+                <section class="slide-up">
+                    <div class="flex items-center gap-4 mb-10 border-r-4 border-indigo-600 pr-6">
+                        <h2 class="text-3xl font-bold text-slate-900">معتقدات شائعة خاطئة</h2>
+                    </div>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-right border-collapse bg-white rounded-2xl overflow-hidden shadow-lg border border-slate-200">
+                            <thead>
+                                <tr class="bg-indigo-900 text-white">
+                                    <th class="p-6 font-bold text-lg border-l border-white/10">المعتقد الشائع ❌</th>
+                                    <th class="p-6 font-bold text-lg">الحقيقة ✅</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-slate-700">
+                                <tr class="border-b border-slate-100 hover:bg-slate-50 transition-colors">
+                                    <td class="p-6 border-l border-slate-100">الحديث عن الأمر يجعله أسوأ</td>
+                                    <td class="p-6 font-medium text-emerald-700">الحديث عنه يساعد ويفتح باب الدعم</td>
+                                </tr>
+                                <tr class="border-b border-slate-100 hover:bg-slate-50 transition-colors bg-indigo-50/30">
+                                    <td class="p-6 border-l border-slate-100">من يذكره يبحث فقط عن الاهتمام</td>
+                                    <td class="p-6 font-medium text-emerald-700">كل إشارة هي علامة على أن الشخص يحتاج مساعدة</td>
+                                </tr>
+                                <tr class="border-b border-slate-100 hover:bg-slate-50 transition-colors">
+                                    <td class="p-6 border-l border-slate-100">الأشخاص الأقوياء لا يشعرون بهذا</td>
+                                    <td class="p-6 font-medium text-emerald-700">يمكن أن يحدث هذا لأي شخص، فالقوة ليس لها علاقة بالأمر</td>
+                                </tr>
+                                <tr class="border-b border-slate-100 hover:bg-slate-50 transition-colors bg-indigo-50/30">
+                                    <td class="p-6 border-l border-slate-100">لا أحد يستطيع فعل شيء</td>
+                                    <td class="p-6 font-medium text-emerald-700">مع الدعم الصحيح، يتجاوز معظم الناس هذا</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- Video -->
+                <section class="slide-up">
+                    <div class="flex items-center gap-4 mb-10 border-r-4 border-indigo-600 pr-6">
+                        <h2 class="text-3xl font-bold text-slate-900">فيديو توعوي</h2>
+                    </div>
+                    <div class="aspect-video w-full rounded-2xl overflow-hidden shadow-2xl border border-indigo-100">
+                        <iframe 
+                            class="w-full h-full"
+                            src="https://www.youtube.com/embed/UaR1AXOrrVc" 
+                            title="YouTube video player" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </section>
+
             </div>
         </div>
     </div>
 
-    <!-- Footer (Shared) -->
-    <footer class="bg-medical-grey border-t border-slate-200 py-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p class="text-slate-500 font-medium font-primary">© 2026 بوصلة صحة المجتمع. جميع الحقوق محفوظة.</p>
+    <!-- Footer -->
+    <footer id="footer" class="bg-medical-grey border-t border-slate-200 pt-20 pb-10 mt-20 scroll-mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-16 mb-16 text-right">
+                <!-- Branding -->
+                <div class="space-y-6">
+                    <div class="flex items-center gap-2 justify-start">
+                        <div class="bg-medical-teal-light p-2 rounded-md"><i data-lucide="compass" class="w-5 h-5 text-medical-teal"></i></div>
+                        <span class="text-xl font-bold text-medical-teal-dark">بوصلة صحة المجتمع</span>
+                    </div>
+                    <p class="text-slate-600 leading-relaxed max-w-sm">
+                        منصة توعوية شاملة تهدف إلى نشر الوعي الصحي والاجتماعي الصحيح وتمكين الأفراد من بناء حياة متوازنة ومستقرة.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="space-y-6 text-right">
+                    <h3 class="text-medical-teal-dark font-bold text-sm uppercase tracking-widest">روابط سريعة</h3>
+                    <ul class="space-y-4 text-slate-600 font-medium">
+                        <li><a href="index.html" class="hover:text-medical-teal transition-colors flex items-center gap-2"><i data-lucide="chevron-left" class="w-4 h-4"></i> الرئيسية</a></li>
+                        <li><a href="index.html#health-topics" class="hover:text-medical-teal transition-colors flex items-center gap-2"><i data-lucide="chevron-left" class="w-4 h-4"></i> الموضوعات الصحية</a></li>
+                        <li><a href="index.html#social-awareness" class="hover:text-medical-teal transition-colors flex items-center gap-2"><i data-lucide="chevron-left" class="w-4 h-4"></i> الموضوعات الاجتماعية</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="space-y-6 text-right font-medium">
+                    <h3 class="text-medical-teal-dark font-bold text-sm uppercase tracking-widest">تواصل معنا</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-4 text-slate-600">
+                            <div class="bg-white w-10 h-10 rounded-md shadow-sm border border-slate-100 flex items-center justify-center shrink-0"><i data-lucide="mail" class="w-5 h-5 text-medical-teal"></i></div>
+                            <span>Example@gmail.com</span>
+                        </div>
+                        <div class="flex items-center gap-4 text-slate-600">
+                            <div class="bg-white w-10 h-10 rounded-md shadow-sm border border-slate-100 relative flex items-center justify-center shrink-0">
+                                <i data-lucide="message-circle" class="w-5 h-5 text-medical-teal"></i>
+                                <i data-lucide="phone" class="w-2.5 h-2.5 text-medical-teal absolute" style="transform: translateY(-1px);"></i>
+                            </div>
+                            <a href="https://wa.me/201050919907" target="_blank" class="hover:text-medical-teal transition-colors" dir="ltr">+20 10 50919907</a>
+                        </div>
+                        <div class="flex items-center gap-4 text-slate-600">
+                            <div class="bg-white w-10 h-10 rounded-md shadow-sm border border-slate-100 flex items-center justify-center shrink-0"><i data-lucide="map-pin" class="w-5 h-5 text-medical-teal"></i></div>
+                            <span>جمهورية مصر العربية ، الفيوم</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-slate-200 pt-10 flex flex-col md:flex-row justify-between items-center gap-6">
+                <p class="text-sm text-slate-500">© 2026 بوصلة صحة المجتمع. جميع الحقوق محفوظة.</p>
+                <div class="flex gap-8 text-xs font-bold text-slate-400 uppercase tracking-widest">
+                    <a href="#" class="hover:text-medical-teal">سياسة الخصوصية</a>
+                    <a href="#" class="hover:text-medical-teal">شروط الاستخدام</a>
+                </div>
+            </div>
         </div>
     </footer>
 
     <script>
+        // Init Lucide Icons
         lucide.createIcons();
+
+        // Responsive Menu Toggle
         const menuBtn = document.getElementById('menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         
         let isOpen = false;
-        menuBtn.onclick = () => {
+        menuBtn.addEventListener('click', () => {
             isOpen = !isOpen;
             mobileMenu.classList.toggle('menu-open');
             const icon = menuBtn.querySelector('[data-lucide]');
@@ -197,7 +420,20 @@
                 icon.setAttribute('data-lucide', isOpen ? 'x' : 'menu');
                 lucide.createIcons();
             }
-        };
+        });
+
+        // Close menu when a link is clicked
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('menu-open');
+                isOpen = false;
+                const icon = menuBtn.querySelector('[data-lucide]');
+                if (icon) {
+                    icon.setAttribute('data-lucide', 'menu');
+                    lucide.createIcons();
+                }
+            });
+        });
     </script>
 </body>
 </html>

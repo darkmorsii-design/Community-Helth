@@ -117,13 +117,13 @@
             <div class="absolute inset-0 bg-medical-blue-deep/40 backdrop-blur-[1.5px]"></div>
         </div>
 
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-20 md:py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-12 pb-20 md:pt-20 md:pb-32">
                 <div class="max-w-3xl slide-up">
                     <div class="flex flex-wrap items-center gap-3 mb-8">
                         <span class="px-4 py-1.5 rounded-full bg-medical-teal text-white text-sm font-bold uppercase tracking-wider">بوصلة صحة المجتمع</span>
                     </div>
-                    <h1 class="text-5xl md:text-7xl font-bold text-white leading-tight mb-8">
-                    نرشدك نحو <span class="text-medical-teal">مجتمع واعي</span> وحياة أفضل
+                    <h1 class="text-5xl md:text-7xl font-bold text-white leading-[1.3] md:leading-tight mb-8">
+                    معاً نحو <span class="text-medical-teal">مجتمع أكثر وعياً</span> وصحة
                 </h1>
                 <p class="text-xl text-slate-100 mb-10 leading-relaxed max-w-2xl">
                     الصفحة تهدف إلى تعزيز ونشر الوعي الصحي والمجتمعي بين جميع أفراد المجتمع.
@@ -147,7 +147,7 @@
     </section>
 
     <!-- Health Topics Section -->
-    <section id="health-topics" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 scroll-mt-48">
+    <section id="health-topics" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 scroll-mt-20">
         <div class="text-center max-w-3xl mx-auto mb-20 slide-up">
             <span class="text-medical-teal font-bold uppercase tracking-widest text-sm mb-4 block">الوقاية والعلاج</span>
             <h2 class="text-3xl md:text-5xl font-bold text-slate-900 mb-6 font-primary">الموضوعات الصحية</h2>
@@ -157,59 +157,63 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <!-- Hypertension -->
             <a href="hypertension.html" class="bg-white p-8 rounded-xl border border-slate-100 shadow-sm hover-lift group border-b-4 border-b-medical-blue transition-all">
-                <div class="inline-flex p-4 bg-medical-teal-light rounded-xl mb-6 group-hover:bg-medical-blue group-hover:text-white transition-all text-medical-blue">
-                    <i data-lucide="activity" class="w-8 h-8"></i>
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="p-4 bg-medical-teal-light rounded-xl group-hover:bg-medical-blue group-hover:text-white transition-all text-medical-blue">
+                        <i data-lucide="activity" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-900">دليل ضغط الدم</h3>
                 </div>
-                <h3 class="text-xl font-bold text-slate-900 mb-3">دليل ضغط الدم</h3>
-                <p class="text-slate-600 text-sm leading-relaxed mb-6">كل ما تحتاجه للتحكم في ضغط الدم وحماية قلبك.</p>
-                <span class="flex items-center gap-2 text-medical-teal text-sm font-bold">
+                <p class="text-slate-600 text-lg leading-relaxed mb-6">كل ما تحتاجه للتحكم في ضغط الدم وحماية قلبك.</p>
+                <span class="flex items-center gap-2 text-medical-teal text-sm font-bold group-hover:gap-4 transition-all">
                     اقرأ المزيد 
-                    <i data-lucide="arrow-left" class="w-4 h-4"></i>
+                    <i data-lucide="arrow-left" class="w-5 h-5"></i>
                 </span>
             </a>
 
-            <!-- Diabetes -->
             <a href="diabetes.html" class="bg-white p-8 rounded-xl border border-slate-100 shadow-sm hover-lift group border-b-4 border-b-medical-teal transition-all">
-                <div class="inline-flex p-4 bg-medical-teal-light rounded-xl mb-6 group-hover:bg-medical-teal group-hover:text-white transition-all text-medical-teal">
-                    <i data-lucide="droplets" class="w-8 h-8"></i>
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="p-4 bg-medical-teal-light rounded-xl group-hover:bg-medical-teal group-hover:text-white transition-all text-medical-teal">
+                        <i data-lucide="droplets" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-900">دليل السكري</h3>
                 </div>
-                <h3 class="text-xl font-bold text-slate-900 mb-3">دليل السكري</h3>
-                <p class="text-slate-600 text-sm leading-relaxed mb-6">فهم كيفية إدارة مستويات السكر والتعايش بذكاء.</p>
-                <span class="flex items-center gap-2 text-medical-teal text-sm font-bold">
+                <p class="text-slate-600 text-lg leading-relaxed mb-6">فهم كيفية إدارة مستويات السكر والتعايش بذكاء.</p>
+                <span class="flex items-center gap-2 text-medical-teal text-sm font-bold group-hover:gap-4 transition-all">
                     اقرأ المزيد 
-                    <i data-lucide="arrow-left" class="w-4 h-4"></i>
+                    <i data-lucide="arrow-left" class="w-5 h-5"></i>
                 </span>
             </a>
 
-            <!-- Obesity -->
             <a href="obesity.html" class="bg-white p-8 rounded-xl border border-slate-100 shadow-sm hover-lift group border-b-4 border-b-orange-500 transition-all">
-                <div class="inline-flex p-4 bg-orange-50 rounded-xl mb-6 group-hover:bg-orange-500 group-hover:text-white transition-all text-orange-500">
-                    <i data-lucide="scale" class="w-8 h-8"></i>
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="p-4 bg-orange-50 rounded-xl group-hover:bg-orange-500 group-hover:text-white transition-all text-orange-500">
+                        <i data-lucide="scale" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-900">السمنة والوزن</h3>
                 </div>
-                <h3 class="text-xl font-bold text-slate-900 mb-3">السمنة والوزن</h3>
-                <p class="text-slate-600 text-sm leading-relaxed mb-6">نصائح غذائية ورياضية للوصول للوزن المثالي والصحي.</p>
-                <span class="flex items-center gap-2 text-orange-500 text-sm font-bold">
+                <p class="text-slate-600 text-lg leading-relaxed mb-6">نصائح غذائية ورياضية للوصول للوزن المثالي والصحي.</p>
+                <span class="flex items-center gap-2 text-orange-500 text-sm font-bold group-hover:gap-4 transition-all">
                     اقرأ المزيد 
-                    <i data-lucide="arrow-left" class="w-4 h-4"></i>
+                    <i data-lucide="arrow-left" class="w-5 h-5"></i>
                 </span>
             </a>
 
-            <!-- First Aid -->
             <div class="bg-white p-8 rounded-xl border border-slate-100 shadow-sm hover-lift group border-b-4 border-b-red-500 transition-all">
-                <div class="inline-flex p-4 bg-red-50 rounded-xl mb-6 group-hover:bg-red-500 group-hover:text-white transition-all text-red-500">
-                    <i data-lucide="cross" class="w-8 h-8"></i>
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="p-4 bg-red-50 rounded-xl group-hover:bg-red-500 group-hover:text-white transition-all text-red-500">
+                        <i data-lucide="cross" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-900">الإسعافات الأولية</h3>
                 </div>
-                <h3 class="text-xl font-bold text-slate-900 mb-3">الإسعافات الأولية</h3>
-                <p class="text-slate-600 text-sm leading-relaxed mb-6">دليلك السريع للتعامل مع الحالات الطارئة بكفاءة.</p>
+                <p class="text-slate-600 text-lg leading-relaxed mb-6">دليلك السريع للتعامل مع الحالات الطارئة بكفاءة.</p>
                 <span class="text-slate-400 text-sm font-medium italic">قريباً</span>
             </div>
         </div>
     </section>
 
     <!-- Social Awareness Section -->
-    <section id="social-awareness" class="bg-slate-50 py-32 border-y border-slate-200 scroll-mt-48">
+    <section id="social-awareness" class="bg-slate-50 py-32 border-y border-slate-200 scroll-mt-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-20 slide-up">
                 <span class="text-medical-blue font-bold uppercase tracking-widest text-sm mb-4 block">بناء مجتمع أقوى</span>
@@ -244,16 +248,19 @@
                     <span class="text-slate-400 text-sm font-medium italic">قريباً</span>
                 </div>
 
-                <!-- Bullying -->
-                <div class="bg-white p-10 rounded-xl border border-slate-100 shadow-sm hover-lift group relative overflow-hidden">
+                <!-- Cyberbullying -->
+                <div class="bg-white p-10 rounded-xl border border-slate-100 shadow-sm hover-lift group">
                     <div class="flex items-center gap-4 mb-6">
-                        <div class="p-4 bg-orange-50 rounded-lg text-orange-600 group-hover:bg-orange-600 group-hover:text-white transition-all">
-                            <i data-lucide="shield-off" class="w-6 h-6"></i>
+                        <div class="p-4 bg-indigo-50 rounded-lg text-indigo-600 group-hover:bg-indigo-600 group-hover:text-white transition-all">
+                            <i data-lucide="monitor-off" class="w-6 h-6"></i>
                         </div>
-                        <h3 class="text-2xl font-bold text-slate-900">التنمر</h3>
+                        <h3 class="text-2xl font-bold text-slate-900">التنمر الإلكتروني</h3>
                     </div>
-                    <p class="text-slate-600 leading-relaxed text-lg mb-8">مواجهة التنمر بجميع أشكاله، وكيفية توفير بيئة تعليمية واجتماعية آمنة وداعمة للجميع.</p>
-                    <span class="text-slate-400 text-sm font-medium italic">قريباً</span>
+                    <p class="text-slate-600 leading-relaxed text-lg mb-8">مواجهة التنمر الإلكتروني بجميع أشكاله، وكيفية حماية نفسك في العالم الرقمي وتوفير بيئة داعمة للجميع.</p>
+                    <a href="cyberbullying.html" class="flex items-center gap-2 text-indigo-600 font-bold hover:gap-4 transition-all">
+                        <span>اقرأ المزيد</span>
+                        <i data-lucide="arrow-left" class="w-5 h-5"></i>
+                    </a>
                 </div>
 
                 <!-- Addiction -->
@@ -290,7 +297,7 @@
     </section>
 
     <!-- Feedback Section -->
-    <section id="feedback" class="py-32 bg-white scroll-mt-48">
+    <section id="feedback" class="py-32 bg-white scroll-mt-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="bg-medical-blue-deep rounded-xl p-8 md:p-16 flex flex-col md:flex-row items-center justify-between gap-12 text-white relative overflow-hidden shadow-2xl">
                 <!-- Decorative element -->
@@ -323,7 +330,7 @@
     </section>
 
     <!-- Footer -->
-    <footer id="footer" class="bg-medical-grey border-t border-slate-200 pt-20 pb-10 scroll-mt-48">
+    <footer id="footer" class="bg-medical-grey border-t border-slate-200 pt-20 pb-10 scroll-mt-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-16 mb-16 text-right">
                 <!-- Branding -->
