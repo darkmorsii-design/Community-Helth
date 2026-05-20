@@ -126,18 +126,40 @@
         </div>
     </header>
 
-    <main class="py-16 space-y-24">
-        <!-- Definition Section -->
-        <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center slide-up">
-            <div class="bg-obesity-light/50 p-8 md:p-12 rounded-[2rem] border border-obesity-light">
-                <h2 class="text-3xl font-bold text-obesity-dark mb-6">ما هي السمنة؟</h2>
-                <p class="text-lg md:text-xl text-slate-600 leading-relaxed font-medium">
-                    السمنة هي تراكم مفرط للدهون في الجسم يؤثر سلبًا على الصحة، وقد يزيد من خطر الإصابة بالعديد من الأمراض المزمنة مثل أمراض القلب والسكري وارتفاع ضغط الدم. وهي حالة طبية تتطلب الوعي والعمل للوقاية من مضاعفاتها.
-                </p>
-            </div>
-        </section>
+    <main class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-4 gap-12">
+                
+                <!-- Quick Navigation Sidebar (Sticky) -->
+                <aside class="hidden lg:block lg:col-span-1">
+                    <div class="sticky top-28 space-y-4">
+                        <h3 class="text-sm font-bold text-slate-400 uppercase tracking-widest mb-4">فهرس المحتوى</h3>
+                        <nav class="flex flex-col gap-2 border-r-2 border-slate-100 pr-4">
+                            <a href="#definition" class="text-slate-600 hover:text-obesity-primary transition-colors py-1 hover:font-medium">ما هي السمنة؟</a>
+                            <a href="#statistics" class="text-slate-600 hover:text-obesity-primary transition-colors py-1 hover:font-medium">إحصائيات السمنة</a>
+                            <a href="#causes" class="text-slate-600 hover:text-obesity-primary transition-colors py-1 hover:font-medium">أسباب السمنة</a>
+                            <a href="#symptoms" class="text-slate-600 hover:text-obesity-primary transition-colors py-1 hover:font-medium">أعراض السمنة</a>
+                            <a href="#prevention" class="text-slate-600 hover:text-obesity-primary transition-colors py-1 hover:font-medium">طرق الوقاية</a>
+                            <a href="#childhood" class="text-slate-600 hover:text-obesity-primary transition-colors py-1 hover:font-medium">السمنة عند الأطفال</a>
+                            <a href="#awareness" class="text-slate-600 hover:text-obesity-primary transition-colors py-1 hover:font-medium">رسالة توعوية</a>
+                            <a href="#bmi-calc" class="text-slate-600 hover:text-obesity-primary transition-colors py-1 hover:font-medium">حاسبة مؤشر الكتلة</a>
+                        </nav>
+                    </div>
+                </aside>
+
+                <!-- Main Content Area -->
+                <div class="lg:col-span-3 space-y-24">
+                    <!-- Definition Section -->
+                    <section id="definition" class="text-center slide-up">
+                        <div class="bg-obesity-light/50 p-8 md:p-12 rounded-[2rem] border border-obesity-light">
+                            <h2 class="text-3xl font-bold text-obesity-dark mb-6">ما هي السمنة؟</h2>
+                            <p class="text-lg md:text-xl text-slate-600 leading-relaxed font-medium">
+                                السمنة هي تراكم مفرط للدهون في الجسم يؤثر سلبًا على الصحة، وقد يزيد من خطر الإصابة بالعديد من الأمراض المزمنة مثل أمراض القلب والسكري وارتفاع ضغط الدم. وهي حالة طبية تتطلب الوعي والعمل للوقاية من مضاعفاتها.
+                            </p>
+                        </div>
+                    </section>
         <!-- Statistics Section -->
-        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section id="statistics" class="slide-up">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
                 <!-- Global Stats -->
                 <div class="bg-white p-8 rounded-3xl border border-obesity-light shadow-xl shadow-obesity-primary/5 slide-up">
@@ -188,7 +210,7 @@
         </section>
 
         <!-- Causes Section -->
-        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 slide-up">
+        <section id="causes" class="slide-up">
             <h2 class="text-3xl font-bold text-slate-900 mb-12 text-center">أسباب السمنة</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-lg text-center hover:shadow-xl transition-shadow group">
@@ -223,7 +245,7 @@
         </section>
 
         <!-- Symptoms Section -->
-        <section class="bg-slate-50 py-24">
+        <section id="symptoms" class="bg-slate-50 py-16 px-4 md:px-8 rounded-2xl border border-slate-100 slide-up">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 slide-up">
                 <div class="text-right mb-16 max-w-3xl mr-auto ml-0">
                     <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6">أعراض السمنة</h2>
@@ -266,7 +288,7 @@
         </section>
 
         <!-- Prevention Section -->
-        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 slide-up">
+        <section id="prevention" class="slide-up">
             <h2 class="text-3xl font-bold text-slate-900 mb-16 text-center">طرق الوقاية من السمنة</h2>
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 text-right">
                 <!-- Nutrition -->
@@ -303,7 +325,7 @@
         </section>
 
         <!-- Children's Obesity -->
-        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section id="childhood" class="slide-up">
             <div class="bg-gradient-to-l from-obesity-primary to-orange-600 p-10 md:p-16 rounded-[2.5rem] text-white shadow-2xl relative overflow-hidden slide-up">
                 <div class="absolute bottom-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl translate-x-1/3 translate-y-1/3"></div>
                 <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -338,7 +360,7 @@
         </section>
 
         <!-- Awareness Hub -->
-        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 slide-up">
+        <section id="awareness" class="space-y-12 slide-up">
             <h2 class="text-3xl font-bold text-slate-900 border-r-8 border-obesity-primary pr-6">رسالة توعوية</h2>
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
                 <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-xl space-y-8">
@@ -445,6 +467,9 @@
                 </div>
             </div>
         </section>
+                </div>
+            </div>
+        </div>
     </main>
 
     <!-- Footer -->

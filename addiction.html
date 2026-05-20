@@ -111,7 +111,27 @@
     </header>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-        <div class="max-w-5xl mx-auto space-y-24 text-right">
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-12">
+            
+            <!-- Quick Navigation Sidebar (Sticky) -->
+            <aside class="hidden lg:block lg:col-span-1">
+                <div class="sticky top-28 space-y-4">
+                    <h3 class="text-sm font-bold text-slate-400 uppercase tracking-widest mb-4">فهرس المحتوى</h3>
+                    <nav class="flex flex-col gap-2 border-r-2 border-slate-100 pr-4">
+                        <a href="#what-is-addiction" class="text-slate-600 hover:text-red-500 transition-colors py-1 hover:font-medium text-right">ما هو الإدمان؟</a>
+                        <a href="#egyptian-stats" class="text-slate-600 hover:text-red-500 transition-colors py-1 hover:font-medium text-right">إحصائيات مصر</a>
+                        <a href="#global-stats" class="text-slate-600 hover:text-red-500 transition-colors py-1 hover:font-medium text-right">إحصائيات العالم</a>
+                        <a href="#types" class="text-slate-600 hover:text-red-500 transition-colors py-1 hover:font-medium text-right">أنواع الإدمان</a>
+                        <a href="#symptoms" class="text-slate-600 hover:text-red-500 transition-colors py-1 hover:font-medium text-right">أعراض الإدمان</a>
+                        <a href="#causes" class="text-slate-600 hover:text-red-500 transition-colors py-1 hover:font-medium text-right">أسباب الإدمان ومعوقاته</a>
+                        <a href="#recovery" class="text-slate-600 hover:text-red-500 transition-colors py-1 hover:font-medium text-right">طريق التعافي والحل</a>
+                        <a href="#prevention" class="text-slate-600 hover:text-red-500 transition-colors py-1 hover:font-medium text-right">نصائح للوقاية</a>
+                    </nav>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <div class="lg:col-span-3 space-y-24 text-right">
             <!-- Main Content -->
                 
                 <!-- Definition -->
@@ -126,8 +146,7 @@
                 </section>
 
                 <!-- Statistics Section -->
-                <section class="slide-up">
-                    <div class="bg-medical-blue-deep rounded-3xl p-10 text-white relative overflow-hidden">
+                <section id="egyptian-stats" class="slide-up">
                         <div class="absolute -top-20 -left-20 w-80 h-80 bg-white/5 rounded-full blur-3xl"></div>
                         <div class="relative z-10">
                             <h2 class="text-2xl font-bold mb-10 block border-b border-white/10 pb-4 leading-tight">
@@ -160,8 +179,7 @@
                 </section>
 
                 <!-- Global Stats -->
-                <section class="slide-up">
-                    <div class="flex items-center gap-4 mb-10 border-r-4 border-medical-blue pr-6">
+                <section id="global-stats" class="slide-up">
                         <h2 class="text-3xl font-bold text-slate-900 leading-tight">
                             نسبة الإدمان والتعاطي في العالم
                             <span class="block text-lg font-medium text-slate-500 mt-2 uppercase">(حسب منظمة الصحة العالمية والأمم المتحدة)</span>
@@ -182,8 +200,7 @@
                 </section>
 
                 <!-- Types of Addiction -->
-                <section class="slide-up">
-                    <div class="flex items-center gap-4 mb-10 border-r-4 border-red-600 pr-6">
+                <section id="types" class="slide-up">
                         <h2 class="text-3xl font-bold text-slate-900">أنواع الإدمان</h2>
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
@@ -227,7 +244,7 @@
                 </section>
 
                 <!-- Symptoms -->
-                <section class="slide-up">
+                <section id="symptoms" class="slide-up">
                     <div class="flex items-center gap-4 mb-10 border-r-4 border-red-600 pr-6">
                         <h2 class="text-3xl font-bold text-slate-900">أعراض وعلامات الإدمان</h2>
                     </div>
@@ -264,9 +281,9 @@
                 </section>
 
                 <!-- Causes -->
-                <section class="slide-up">
+                <section id="causes" class="slide-up">
                     <div class="flex items-center gap-4 mb-10 border-r-4 border-red-600 pr-6">
-                        <h2 class="text-3xl font-bold text-slate-900">أسباب الوقوع في الإدمان</h2>
+                        <h2 class="text-3xl font-bold text-slate-900">أسباب الوقوع في الإدمان وتأثيراته</h2>
                     </div>
                     <div class="space-y-10">
                         <div class="bg-red-50 p-10 rounded-2xl border border-red-100">
@@ -371,7 +388,7 @@
                 </section>
 
                 <!-- Recovery Path Image & Guide -->
-                <section class="slide-up">
+                <section id="recovery" class="slide-up">
                     <div class="flex items-center gap-4 mb-10 border-r-4 border-emerald-600 pr-6">
                         <h2 class="text-3xl font-bold text-slate-900">طريق التعافي والعلاج</h2>
                     </div>
@@ -441,8 +458,7 @@
                 </section>
 
                 <!-- Final Advice -->
-                <section class="slide-up">
-                    <div class="flex items-center gap-4 mb-10 border-r-4 border-medical-teal pr-6">
+                <section id="prevention" class="slide-up">
                         <h2 class="text-3xl font-bold text-slate-900 leading-tight">
                             نصائح للوقاية
                             <span class="block text-lg font-medium text-slate-500 mt-2">(لكل الفئات)</span>

@@ -109,12 +109,34 @@
     </header>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-        <div class="max-w-5xl mx-auto space-y-24 text-right">
-            <!-- Main Content -->
-            <div class="space-y-24 text-right">
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-12">
+            
+            <!-- Quick Navigation Sidebar (Sticky) -->
+            <aside class="hidden lg:block lg:col-span-1">
+                <div class="sticky top-28 space-y-4">
+                    <h3 class="text-sm font-bold text-slate-400 uppercase tracking-widest mb-4">فهرس المحتوى</h3>
+                    <nav class="flex flex-col gap-2 border-r-2 border-slate-100 pr-4">
+                        <a href="#intro" class="text-slate-600 hover:text-indigo-600 transition-colors py-1 hover:font-medium text-right">مقدمة</a>
+                        <a href="#types" class="text-slate-600 hover:text-indigo-600 transition-colors py-1 hover:font-medium text-right">أنواع التنمر</a>
+                        <a href="#causes" class="text-slate-600 hover:text-indigo-600 transition-colors py-1 hover:font-medium text-right">أسباب الانتشار</a>
+                        <a href="#effects" class="text-slate-600 hover:text-indigo-600 transition-colors py-1 hover:font-medium text-right">آثار التنمر</a>
+                        <a href="#privacy" class="text-slate-600 hover:text-indigo-600 transition-colors py-1 hover:font-medium text-right">حماية الخصوصية</a>
+                        <a href="#respond" class="text-slate-600 hover:text-indigo-600 transition-colors py-1 hover:font-medium text-right">كيفية المواجهة</a>
+                        <a href="#recover" class="text-slate-600 hover:text-indigo-600 transition-colors py-1 hover:font-medium text-right">كيفية التعافي</a>
+                        <a href="#helping" class="text-slate-600 hover:text-indigo-600 transition-colors py-1 hover:font-medium text-right">مساعدة الضحايا</a>
+                        <a href="#roles" class="text-slate-600 hover:text-indigo-600 transition-colors py-1 hover:font-medium text-right">دور الأسرة والمدرسة</a>
+                        <a href="#nursing" class="text-slate-600 hover:text-indigo-600 transition-colors py-1 hover:font-medium text-right">دور التمريض</a>
+                        <a href="#video" class="text-slate-600 hover:text-indigo-600 transition-colors py-1 hover:font-medium text-right">فيديو توعوي</a>
+                        <a href="#conclusion" class="text-slate-600 hover:text-indigo-600 transition-colors py-1 hover:font-medium text-right">خاتمة</a>
+                    </nav>
+                </div>
+            </aside>
+
+            <!-- Main Content Area -->
+            <div class="lg:col-span-3 space-y-24 text-right">
                 
                 <!-- Introduction -->
-                <section class="slide-up">
+                <section id="intro" class="slide-up">
                     <div class="flex items-center gap-4 mb-10 border-r-4 border-indigo-600 pr-6">
                         <h2 class="text-3xl font-bold text-slate-900">مقدمة</h2>
                     </div>
@@ -129,7 +151,7 @@
                 </section>
 
                 <!-- Types of Cyberbullying -->
-                <section class="slide-up">
+                <section id="types" class="slide-up">
                     <div class="flex items-center gap-4 mb-10 border-r-4 border-indigo-600 pr-6">
                         <h2 class="text-3xl font-bold text-slate-900">أنواع التنمر الإلكتروني</h2>
                     </div>
@@ -187,7 +209,7 @@
                 </section>
 
                 <!-- Reasons for Spread -->
-                <section class="slide-up">
+                <section id="causes" class="slide-up">
                     <div class="flex items-center gap-4 mb-10 border-r-4 border-indigo-600 pr-6">
                         <h2 class="text-3xl font-bold text-slate-900">أسباب انتشار التنمر الإلكتروني</h2>
                     </div>
@@ -235,7 +257,7 @@
                 </section>
 
                 <!-- Effects on Victim -->
-                <section class="slide-up">
+                <section id="effects" class="slide-up">
                     <div class="flex items-center gap-4 mb-10 border-r-4 border-indigo-600 pr-6">
                         <h2 class="text-3xl font-bold text-slate-900">آثار التنمر الإلكتروني على الضحية</h2>
                     </div>
@@ -299,7 +321,7 @@
                 </section>
                 
                 <!-- Privacy and Identity -->
-                <section class="slide-up">
+                <section id="privacy" class="slide-up">
                     <div class="flex items-center gap-4 mb-10 border-r-4 border-indigo-600 pr-6">
                         <h2 class="text-3xl font-bold text-slate-900">كيف يحافظ الشخص على هويته وخصوصيته على الإنترنت؟</h2>
                     </div>
@@ -383,7 +405,7 @@
                 </section>
 
                 <!-- How to Respond -->
-                <section class="slide-up">
+                <section id="respond" class="slide-up">
                     <div class="flex items-center gap-4 mb-10 border-r-4 border-indigo-600 pr-6">
                         <h2 class="text-3xl font-bold text-slate-900">ماذا يفعل الشخص إذا تعرض للتنمر الإلكتروني؟</h2>
                     </div>
@@ -457,7 +479,7 @@
                 </section>
 
                 <!-- How to Recover -->
-                <section class="slide-up">
+                <section id="recover" class="slide-up">
                     <div class="flex items-center gap-4 mb-10 border-r-4 border-indigo-600 pr-6">
                         <h2 class="text-3xl font-bold text-slate-900">كيف يتعافى الشخص من آثار التنمر الإلكتروني؟</h2>
                     </div>
@@ -514,7 +536,7 @@
                 </section>
 
                 <!-- Helping Victims -->
-                <section class="slide-up">
+                <section id="helping" class="slide-up">
                     <div class="flex items-center gap-4 mb-10 border-r-4 border-indigo-600 pr-6">
                         <h2 class="text-3xl font-bold text-slate-900">كيف يمكننا مساعدة ضحايا التنمر الإلكتروني؟</h2>
                     </div>
@@ -550,7 +572,7 @@
                 </section>
 
                 <!-- Family and School Role -->
-                <section class="slide-up">
+                <section id="roles" class="slide-up">
                     <div class="flex items-center gap-4 mb-10 border-r-4 border-indigo-600 pr-6">
                         <h2 class="text-3xl font-bold text-slate-900">دور الأسرة والمدرسة في الوقاية من التنمر الإلكتروني</h2>
                     </div>
@@ -584,7 +606,7 @@
                 </section>
 
                 <!-- Nursing Role -->
-                <section class="slide-up">
+                <section id="nursing" class="slide-up">
                     <div class="flex items-center gap-4 mb-10 border-r-4 border-indigo-600 pr-6">
                         <h2 class="text-3xl font-bold text-slate-900">دور التمريض في منع التنمر الإلكتروني</h2>
                     </div>
@@ -668,7 +690,7 @@
                 </section>
 
                 <!-- Video Section -->
-                <section class="slide-up">
+                <section id="video" class="slide-up">
                     <div class="flex items-center gap-4 mb-10 border-r-4 border-indigo-600 pr-6">
                         <h2 class="text-3xl font-bold text-slate-900">فيديو توعوي</h2>
                     </div>
@@ -686,7 +708,7 @@
                 </section>
 
                 <!-- Conclusion -->
-                <section class="slide-up">
+                <section id="conclusion" class="slide-up">
                     <div class="flex items-center gap-4 mb-10 border-r-4 border-indigo-600 pr-6">
                         <h2 class="text-3xl font-bold text-slate-900">خاتمة</h2>
                     </div>

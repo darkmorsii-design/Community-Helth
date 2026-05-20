@@ -117,10 +117,30 @@
     </header>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-12">
+            
+            <!-- Quick Navigation Sidebar (Sticky) -->
+            <aside class="hidden lg:block lg:col-span-1">
+                <div class="sticky top-28 space-y-4">
+                    <h3 class="text-sm font-bold text-slate-400 uppercase tracking-widest mb-4">فهرس المحتوى</h3>
+                    <nav class="flex flex-col gap-2 border-r-2 border-slate-100 pr-4">
+                        <a href="#summary" class="text-slate-600 hover:text-medical-blue transition-colors py-1 hover:font-medium">نبذة مختصرة</a>
+                        <a href="#definition" class="text-slate-600 hover:text-medical-blue transition-colors py-1 hover:font-medium">تعريف المرض</a>
+                        <a href="#table" class="text-slate-600 hover:text-medical-blue transition-colors py-1 hover:font-medium">جدول فئات الضغط</a>
+                        <a href="#causes" class="text-slate-600 hover:text-medical-blue transition-colors py-1 hover:font-medium">الأسباب</a>
+                        <a href="#risk-factors" class="text-slate-600 hover:text-medical-blue transition-colors py-1 hover:font-medium">عوامل الخطورة</a>
+                        <a href="#symptoms" class="text-slate-600 hover:text-medical-blue transition-colors py-1 hover:font-medium">الأعراض</a>
+                        <a href="#complications" class="text-slate-600 hover:text-medical-blue transition-colors py-1 hover:font-medium">المضاعفات</a>
+                        <a href="#diagnosis-treatment" class="text-slate-600 hover:text-medical-blue transition-colors py-1 hover:font-medium">التشخيص والعلاج</a>
+                        <a href="#prevention" class="text-slate-600 hover:text-medical-blue transition-colors py-1 hover:font-medium">الوقاية</a>
+                        <a href="#faq" class="text-slate-600 hover:text-medical-blue transition-colors py-1 hover:font-medium">الأسئلة الشائعة</a>
+                        <a href="#misconceptions" class="text-slate-600 hover:text-medical-blue transition-colors py-1 hover:font-medium">مفاهيم خاطئة</a>
+                    </nav>
+                </div>
+            </aside>
             
             <!-- Main Content -->
-            <div class="lg:col-span-12 space-y-16">
+            <div class="lg:col-span-3 space-y-16">
                 
                 <!-- Summary Section -->
                 <section id="summary" class="slide-up">
@@ -361,7 +381,7 @@
                 </section>
 
                 <!-- Diagnosis & Treatment -->
-                <section class="grid grid-cols-1 md:grid-cols-2 gap-12 slide-up">
+                <section id="diagnosis-treatment" class="grid grid-cols-1 md:grid-cols-2 gap-12 slide-up">
                     <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100">
                         <h2 class="text-2xl font-bold text-slate-900 mb-8 flex items-center gap-2">
                             <i data-lucide="stethoscope" class="w-6 h-6 text-indigo-600"></i> التشخيص
