@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الإسعافات الأولية | بوصلة صحة المجتمع</title>
+    <link rel="icon" type="image/x-icon" href="logo.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        medical: {
+                            teal: '#00BFFF',
+                            'teal-light': '#E0F7FF',
+                            'teal-dark': '#006080',
+                            blue: '#0082AD',
+                            'blue-light': '#00A1D6',
+                            'blue-deep': '#004157',
+                            grey: '#f5f5f5',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Tajawal', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Tajawal', sans-serif; }
+        .slide-up { animation: slideUp 0.6s ease-out forwards; opacity: 0; will-change: transform, opacity; }
+        @keyframes slideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* Mobile Menu Animation */
+        #mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+            opacity: 0;
+        }
+        #mobile-menu.menu-open {
+            max-height: 400px;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="bg-white text-slate-800 antialiased font-sans">
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-medical-teal-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center gap-2 group transition-all">
+                        <div class="bg-medical-teal-light p-2 rounded-lg group-hover:bg-medical-teal transition-colors">
+                            <i data-lucide="compass" class="w-6 h-6 text-medical-teal group-hover:text-white"></i>
+                        </div>
+                        <span class="text-xl font-bold text-medical-teal-dark tracking-tight">بوصلة صحة المجتمع</span>
+                    </a>
+                </div>
+
+                <!-- Desktop Links -->
+                <div class="hidden md:flex items-center gap-8 font-medium">
+                    <a href="index.html" class="text-slate-600 hover:text-medical-teal transition-colors relative group">
+                        الرئيسية
+                    </a>
+                    <a href="index.html#health-topics" class="text-slate-600 hover:text-medical-teal transition-colors relative group">
+                        الموضوعات الصحية
+                    </a>
+                    <a href="index.html#social-awareness" class="text-slate-600 hover:text-medical-teal transition-colors relative group">
+                        الموضوعات الاجتماعية
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn" class="text-slate-600 hover:text-medical-teal p-2 focus:outline-none">
+                        <i data-lucide="menu" id="menu-icon" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="md:hidden bg-white border-b border-medical-teal-light">
+            <div class="px-4 pt-2 pb-6 space-y-1">
+                <a href="index.html" class="block px-3 py-4 rounded-md text-base font-medium text-slate-600 hover:bg-medical-grey transition-colors">الرئيسية</a>
+                <a href="index.html#health-topics" class="block px-3 py-4 rounded-md text-base font-medium text-slate-600 hover:bg-medical-grey transition-colors">الموضوعات الصحية</a>
+                <a href="index.html#social-awareness" class="block px-3 py-4 rounded-md text-base font-medium text-slate-600 hover:bg-medical-grey transition-colors">الموضوعات الاجتماعية</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header (Emergency Red Accent) -->
+    <header class="bg-red-50/70 py-24 border-b border-red-100 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 pointer-events-none">
+            <!-- Medical pattern decorative effect -->
+            <div class="absolute top-0 left-0 right-0 bottom-0 bg-[radial-gradient(#ef4444_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 slide-up">
+            <span class="inline-block px-4 py-1.5 rounded-full bg-red-100/90 text-red-600 text-sm font-bold mb-6">الوقاية والرعاية العاجلة</span>
+            <h1 class="text-4xl md:text-6xl font-bold text-red-700 mb-6 tracking-tight">الإسعافات الأولية الأساسية</h1>
+            <p class="text-xl text-red-600 max-w-3xl mx-auto leading-relaxed font-bold">
+                الاستجابة السريعة قد تنقذ الأرواح
+            </p>
+        </div>
+    </header>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-12">
+            
+            <!-- Quick Navigation Sidebar (Sticky) -->
+            <aside class="hidden lg:block lg:col-span-1">
+                <div class="sticky top-28 space-y-4">
+                    <h3 class="text-sm font-bold text-slate-400 uppercase tracking-widest mb-4">فهرس المحتوى</h3>
+                    <nav class="flex flex-col gap-2 border-r-2 border-slate-100 pr-4">
+                        <a href="#intro" class="text-slate-600 hover:text-red-600 transition-colors py-1 hover:font-medium">مقدّمة</a>
+                        <a href="#definition" class="text-slate-600 hover:text-red-600 transition-colors py-1 hover:font-medium">تعريف الإسعافات الأولية</a>
+                        <a href="#who-is-rescuer" class="text-slate-600 hover:text-red-600 transition-colors py-1 hover:font-medium">من هو المُسعِف؟</a>
+                        <a href="#importance" class="text-slate-600 hover:text-red-600 transition-colors py-1 hover:font-medium">أهمية الإسعافات الأولية</a>
+                        <a href="#basics" class="text-slate-600 hover:text-red-600 transition-colors py-1 hover:font-medium">أساسيات الإسعافات الأولية</a>
+                        <a href="#wounds" class="text-slate-600 hover:text-red-600 transition-colors py-1 hover:font-medium">الجروح وكيفية إسعافها</a>
+                        <a href="#burns" class="text-slate-600 hover:text-red-600 transition-colors py-1 hover:font-medium">الحروق وكيفية إسعافها</a>
+                        <a href="#fractures" class="text-slate-600 hover:text-red-600 transition-colors py-1 hover:font-medium">الكسور وكيفية إسعافها</a>
+                        <a href="#fainting" class="text-slate-600 hover:text-red-600 transition-colors py-1 hover:font-medium">الإغماء وكيفية إسعافه</a>
+                        <a href="#society-role" class="text-slate-600 hover:text-red-600 transition-colors py-1 hover:font-medium">دور الإسعافات في المجتمع</a>
+                        <a href="#video-tutorial" class="text-red-600 font-bold py-1 flex items-center gap-1"><i data-lucide="play" class="w-4 h-4 shrink-0"></i> فيديو توضيحي</a>
+                    </nav>
+                </div>
+            </aside>
+
+            <!-- Main Content Area -->
+            <div class="lg:col-span-3 space-y-24 text-right">
+                
+                <!-- Introduction -->
+                <section id="intro" class="slide-up scroll-mt-28">
+                    <div class="prose prose-lg max-w-none text-slate-700 leading-[1.8] space-y-6">
+                        <p class="text-xl font-medium text-slate-800 leading-relaxed bg-red-50/50 p-6 rounded-2xl border border-red-100/50">
+                            تُعدّ الإسعافات الأولية من أهم المهارات الإنسانية التي يجب أن يتعلمها كل شخص، لأنها تساعد على إنقاذ الأرواح وتقليل المضاعفات حتى وصول الرعاية الطبية المتخصصة. فقد تحدث الحوادث والإصابات بشكل مفاجئ في المنزل أو المدرسة أو العمل أو الطريق، وهنا تظهر أهمية التصرف السريع والصحيح. إن معرفة أساسيات الإسعافات الأولية تمنح الشخص القدرة على التعامل مع المواقف الطارئة بهدوء وثقة، وقد تكون سببًا في حماية حياة إنسان.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- Definition -->
+                <section id="definition" class="slide-up scroll-mt-28">
+                    <div class="flex items-center gap-4 mb-8 border-r-4 border-red-600 pr-6">
+                        <h2 class="text-3xl font-bold text-slate-900">تعريف الإسعافات الأولية</h2>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm space-y-6 text-slate-600 leading-[1.8]">
+                        <p class="text-lg">
+                            الإسعافات الأولية هي الرعاية أو المساعدة الفورية والمؤقتة التي تُقدَّم لشخص مصاب أو مريض قبل وصول الطبيب أو سيارة الإسعاف. وتهدف هذه الإسعافات إلى الحفاظ على حياة المصاب، ومنع تدهور حالته، وتقليل الألم والمضاعفات، والمساعدة على سرعة التعافي.
+                        </p>
+                        <p class="text-lg font-medium text-red-700 bg-red-50/30 p-4 rounded-xl border border-red-50">
+                            ولا تقتصر الإسعافات الأولية على الأطباء أو الممرضين فقط، بل يمكن لأي شخص تعلمها وممارستها بطريقة صحيحة عند الحاجة.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- Who is Rescuer -->
+                <section id="who-is-rescuer" class="slide-up scroll-mt-28">
+                    <div class="flex items-center gap-4 mb-8 border-r-4 border-red-600 pr-6">
+                        <h2 class="text-3xl font-bold text-slate-900">من هو المُسعِف؟</h2>
+                    </div>
+                    <div class="bg-slate-50/60 p-8 rounded-2xl border border-slate-100 text-slate-600 leading-[1.8] space-y-6">
+                        <p class="text-lg">
+                            المُسعِف هو الشخص الذي يمتلك المعرفة والمهارات الأساسية لتقديم الإسعافات الأولية للمصابين أو المرضى في الحالات الطارئة. وقد يكون المسعف طبيبًا أو ممرضًا أو فردًا عاديًا تلقّى تدريبًا على الإسعافات الأولية.
+                        </p>
+                        <p class="text-lg">
+                            ويعمل المسعفون غالبًا ضمن تخصصات الطوارئ والرعاية الصحية، حيث يكون دورهم الأساسي تقديم المساعدة السريعة للحفاظ على حياة المصاب وتقليل الخطر حتى يتم نقله إلى المستشفى أو تلقي العلاج المناسب.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- Importance -->
+                <section id="importance" class="slide-up scroll-mt-28">
+                    <div class="flex items-center gap-4 mb-8 border-r-4 border-red-600 pr-6">
+                        <h2 class="text-3xl font-bold text-slate-900">أهمية الإسعافات الأولية</h2>
+                    </div>
+                    <div class="text-slate-600 leading-[1.8] space-y-6">
+                        <p class="text-lg mb-6">للإسعافات الأولية أهمية كبيرة في المجتمع، ومن أبرز فوائدها:</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="flex items-start gap-4 p-5 bg-white rounded-xl border border-slate-100 shadow-sm">
+                                <span class="bg-red-50 p-2 rounded-lg text-red-600"><i data-lucide="heart" class="w-5 h-5"></i></span>
+                                <div>
+                                    <h4 class="text-lg font-bold text-slate-900 mb-1">إنقاذ الحياة</h4>
+                                    <p class="text-sm text-slate-600">إنقاذ حياة المصاب في الدقائق الأولى الحرجة.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4 p-5 bg-white rounded-xl border border-slate-100 shadow-sm">
+                                <span class="bg-red-50 p-2 rounded-lg text-red-600"><i data-lucide="shield-alert" class="w-5 h-5"></i></span>
+                                <div>
+                                    <h4 class="text-lg font-bold text-slate-900 mb-1">تقليل المخاطر</h4>
+                                    <p class="text-sm text-slate-600">تقليل خطر المضاعفات أو تدهور الحالة.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4 p-5 bg-white rounded-xl border border-slate-100 shadow-sm">
+                                <span class="bg-red-50 p-2 rounded-lg text-red-600"><i data-lucide="smile" class="w-5 h-5"></i></span>
+                                <div>
+                                    <h4 class="text-lg font-bold text-slate-900 mb-1">تخفيف المعاناة</h4>
+                                    <p class="text-sm text-slate-600">تخفيف الألم والخوف لدى المصاب.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4 p-5 bg-white rounded-xl border border-slate-100 shadow-sm">
+                                <span class="bg-red-50 p-2 rounded-lg text-red-600"><i data-lucide="activity" class="w-5 h-5"></i></span>
+                                <div>
+                                    <h4 class="text-lg font-bold text-slate-900 mb-1">تسريع الشفاء</h4>
+                                    <p class="text-sm text-slate-600">المساعدة على سرعة الشفاء والتعافي.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4 p-5 bg-white rounded-xl border border-slate-100 shadow-sm">
+                                <span class="bg-red-50 p-2 rounded-lg text-red-600"><i data-lucide="shield-check" class="w-5 h-5"></i></span>
+                                <div>
+                                    <h4 class="text-lg font-bold text-slate-900 mb-1">الحماية من العدوى</h4>
+                                    <p class="text-sm text-slate-600">حماية المصاب من العدوى أو الإصابات الإضافية.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4 p-5 bg-white rounded-xl border border-slate-100 shadow-sm">
+                                <span class="bg-red-50 p-2 rounded-lg text-red-600"><i data-lucide="users" class="w-5 h-5"></i></span>
+                                <div>
+                                    <h4 class="text-lg font-bold text-slate-900 mb-1">المسؤولية المجتمعية</h4>
+                                    <p class="text-sm text-slate-600">تعزيز الشعور بالأمان والمسؤولية بين أفراد المجتمع.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Basics -->
+                <section id="basics" class="slide-up scroll-mt-28">
+                    <div class="flex items-center gap-4 mb-8 border-r-4 border-red-600 pr-6">
+                        <h2 class="text-3xl font-bold text-slate-900">أساسيات الإسعافات الأولية</h2>
+                    </div>
+                    <div class="text-slate-600 leading-[1.8] space-y-6">
+                        <p class="text-lg mb-6">هناك مجموعة من القواعد الأساسية التي يجب اتباعها عند التعامل مع أي حالة طارئة، ومنها:</p>
+                        
+                        <div class="space-y-4">
+                            <!-- Rule 1 -->
+                            <div class="p-6 bg-slate-50 rounded-xl border border-slate-100 flex items-start gap-4">
+                                <span class="w-8 h-8 rounded-full bg-red-600 text-white flex items-center justify-center font-bold text-sm shrink-0">١</span>
+                                <div>
+                                    <h4 class="text-lg font-bold text-slate-900 mb-1">الحفاظ على الهدوء</h4>
+                                    <p class="text-slate-600">يجب على المُسعف أن يبقى هادئًا حتى يتمكن من التفكير واتخاذ القرار الصحيح بسرعة.</p>
+                                </div>
+                            </div>
+                            <!-- Rule 2 -->
+                            <div class="p-6 bg-slate-50 rounded-xl border border-slate-100 flex items-start gap-4">
+                                <span class="w-8 h-8 rounded-full bg-red-600 text-white flex items-center justify-center font-bold text-sm shrink-0">٢</span>
+                                <div>
+                                    <h4 class="text-lg font-bold text-slate-900 mb-1">التأكد من سلامة المكان</h4>
+                                    <p class="text-slate-600">قبل الاقتراب من المصاب يجب التأكد من عدم وجود خطر مثل النار أو الكهرباء أو السيارات.</p>
+                                </div>
+                            </div>
+                            <!-- Rule 3 -->
+                            <div class="p-6 bg-slate-50 rounded-xl border border-slate-100 flex items-start gap-4">
+                                <span class="w-8 h-8 rounded-full bg-red-600 text-white flex items-center justify-center font-bold text-sm shrink-0">٣</span>
+                                <div>
+                                    <h4 class="text-lg font-bold text-slate-900 mb-1">طلب المساعدة</h4>
+                                    <p class="text-slate-600">الاتصال بالإسعاف أو طلب المساعدة الطبية فورًا عند وجود إصابة خطيرة.</p>
+                                </div>
+                            </div>
+                            <!-- Rule 4 -->
+                            <div class="p-6 bg-slate-50 rounded-xl border border-slate-100 flex items-start gap-4">
+                                <span class="w-8 h-8 rounded-full bg-red-600 text-white flex items-center justify-center font-bold text-sm shrink-0">٤</span>
+                                <div>
+                                    <h4 class="text-lg font-bold text-slate-900 mb-1">فحص المصاب</h4>
+                                    <p class="text-slate-600">يجب التأكد مما إذا كان المصاب واعيًا ويتنفس بشكل طبيعي.</p>
+                                </div>
+                            </div>
+                            <!-- Rule 5 -->
+                            <div class="p-6 bg-slate-50 rounded-xl border border-slate-100 flex items-start gap-4">
+                                <span class="w-8 h-8 rounded-full bg-red-600 text-white flex items-center justify-center font-bold text-sm shrink-0">٥</span>
+                                <div>
+                                    <h4 class="text-lg font-bold text-slate-900 mb-1">عدم تحريك المصاب دون ضرورة</h4>
+                                    <p class="text-slate-600">خصوصًا إذا كان هناك شك بوجود كسر أو إصابة في العمود الفقري.</p>
+                                </div>
+                            </div>
+                            <!-- Rule 6 -->
+                            <div class="p-6 bg-slate-50 rounded-xl border border-slate-100 flex items-start gap-4">
+                                <span class="w-8 h-8 rounded-full bg-red-600 text-white flex items-center justify-center font-bold text-sm shrink-0">٦</span>
+                                <div>
+                                    <h4 class="text-lg font-bold text-slate-900 mb-1">استخدام أدوات نظيفة</h4>
+                                    <p class="text-slate-600">لمنع انتقال العدوى عند التعامل مع الجروح أو النزيف.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Wounds -->
+                <section id="wounds" class="slide-up scroll-mt-28">
+                    <div class="flex items-center gap-4 mb-8 border-r-4 border-red-600 pr-6">
+                        <h2 class="text-3xl font-bold text-slate-900">الجروح وكيفية إسعافها</h2>
+                    </div>
+                    <div class="text-slate-600 leading-[1.8] space-y-8">
+                        <p class="text-lg">الجروح من أكثر الإصابات شيوعًا، وقد تكون بسيطة أو عميقة وخطيرة. وقد يحدث الجرح بسبب آلة حادة أو سقوط أو حادث.</p>
+                        
+                        <!-- Types -->
+                        <div class="p-6 bg-slate-50 rounded-xl border border-slate-100">
+                            <h3 class="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+                                <i data-lucide="layers" class="text-red-600 w-5 h-5"></i> انواع الجروح
+                            </h3>
+                            <ul class="grid grid-cols-2 lg:grid-cols-4 gap-4 text-slate-700">
+                                <li class="bg-white p-3 rounded-lg border border-slate-100 text-center font-medium">الجروح السطحية</li>
+                                <li class="bg-white p-3 rounded-lg border border-slate-100 text-center font-medium">الجروح العميقة</li>
+                                <li class="bg-white p-3 rounded-lg border border-slate-100 text-center font-medium">الخدوش</li>
+                                <li class="bg-white p-3 rounded-lg border border-slate-100 text-center font-medium">الجروح النازفة</li>
+                            </ul>
+                        </div>
+
+                        <!-- First Aid Steps -->
+                        <div class="p-6 bg-white rounded-xl border border-slate-100 shadow-sm space-y-4">
+                            <h3 class="text-xl font-bold text-slate-900 mb-2 flex items-center gap-2">
+                                <i data-lucide="heart-pulse" class="text-red-700 w-5 h-5"></i> كيفية إسعاف الجروح
+                            </h3>
+                            <ul class="space-y-3 ps-4 list-decimal list-inside text-slate-700">
+                                <li>غسل اليدين جيدًا إن أمكن.</li>
+                                <li>تنظيف الجرح بالماء النظيف بلطف لإزالة الأوساخ.</li>
+                                <li>الضغط على الجرح باستخدام شاش أو قطعة قماش نظيفة لإيقاف النزيف.</li>
+                                <li>رفع الجزء المصاب إذا كان النزيف شديدًا.</li>
+                                <li>تغطية الجرح بضمادة معقمة لمنع العدوى.</li>
+                                <li>مراجعة الطبيب إذا كان الجرح عميقًا أو النزيف لا يتوقف.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Mistakes to avoid -->
+                        <div class="p-6 bg-red-50 rounded-xl border border-red-100 space-y-4">
+                            <h3 class="text-xl font-bold text-red-800 mb-2 flex items-center gap-2">
+                                <i data-lucide="alert-triangle" class="text-red-600 w-5 h-5"></i> أخطاء يجب تجنبها
+                            </h3>
+                            <ul class="space-y-3 ps-4 list-disc list-inside text-slate-700">
+                                <li>لمس الجرح بأيدٍ غير نظيفة.</li>
+                                <li>وضع مواد غير طبية على الجرح.</li>
+                                <li>إزالة الأجسام الكبيرة المغروسة داخل الجرح.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Burns -->
+                <section id="burns" class="slide-up scroll-mt-28">
+                    <div class="flex items-center gap-4 mb-8 border-r-4 border-red-600 pr-6">
+                        <h2 class="text-3xl font-bold text-slate-900">الحروق وكيفية إسعافها</h2>
+                    </div>
+                    <div class="text-slate-600 leading-[1.8] space-y-8">
+                        <p class="text-lg">الحروق تحدث بسبب الحرارة أو الكهرباء أو المواد الكيميائية، وقد تكون بسيطة أو خطيرة حسب درجتها.</p>
+
+                        <!-- Degrees -->
+                        <div class="p-6 bg-orange-50/50 rounded-xl border border-orange-100 space-y-6">
+                            <h3 class="text-xl font-bold text-slate-900 mb-2 flex items-center gap-2">
+                                <i data-lucide="thermometer" class="text-orange-600 w-5 h-5"></i> درجات الحروق
+                            </h3>
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                                <div class="bg-white p-5 rounded-lg border border-slate-100 shadow-sm text-center">
+                                    <h4 class="font-bold text-orange-700 mb-2">حروق الدرجة الأولى</h4>
+                                    <p class="text-sm">تصيب الطبقة الخارجية من الجلد وتسبب احمرارًا وألمًا بسيطًا.</p>
+                                </div>
+                                <div class="bg-white p-5 rounded-lg border border-slate-100 shadow-sm text-center">
+                                    <h4 class="font-bold text-orange-800 mb-2">حروق الدرجة الثانية</h4>
+                                    <p class="text-sm">تسبب فقاعات وتورمًا وألمًا شديدًا.</p>
+                                </div>
+                                <div class="bg-white p-5 rounded-lg border border-slate-100 shadow-sm text-center">
+                                    <h4 class="font-bold text-red-700 mb-2">حروق الدرجة الثالثة</h4>
+                                    <p class="text-sm">تكون شديدة وقد تؤدي إلى تلف الجلد والأنسجة.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- First Aid Steps -->
+                        <div class="p-6 bg-white rounded-xl border border-slate-100 shadow-sm space-y-4">
+                            <h3 class="text-xl font-bold text-slate-900 mb-2 flex items-center gap-2">
+                                <i data-lucide="heart-pulse" class="text-red-700 w-5 h-5"></i> كيفية إسعاف الحروق
+                            </h3>
+                            <ul class="space-y-3 ps-4 list-decimal list-inside text-slate-700">
+                                <li>إبعاد المصاب عن مصدر الحرق.</li>
+                                <li>تبريد المنطقة المصابة بماء جارٍ فاتر لمدة 10 إلى 20 دقيقة.</li>
+                                <li>إزالة الإكسسوارات أو الملابس الضيقة حول الحرق بحذر.</li>
+                                <li>تغطية الحرق بقطعة قماش أو شاش نظيف.</li>
+                                <li>إعطاء المصاب الماء إذا كان واعيًا.</li>
+                            </ul>
+                        </div>
+
+                        <!-- What to avoid -->
+                        <div class="p-6 bg-red-50 rounded-xl border border-red-100 space-y-4">
+                            <h3 class="text-xl font-bold text-red-800 mb-2 flex items-center gap-2">
+                                <i data-lucide="ban" class="text-red-600 w-5 h-5"></i> ما يجب تجنبه
+                            </h3>
+                            <ul class="space-y-3 ps-4 list-disc list-inside text-slate-700">
+                                <li>عدم وضع الثلج مباشرة على الحرق.</li>
+                                <li>عدم فتح الفقاعات الجلدية.</li>
+                                <li>عدم وضع معجون الأسنان أو الزيوت أو أي مواد شعبية على الحروق.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Fractures -->
+                <section id="fractures" class="slide-up scroll-mt-28">
+                    <div class="flex items-center gap-4 mb-8 border-r-4 border-red-600 pr-6">
+                        <h2 class="text-3xl font-bold text-slate-900">الكسور وكيفية إسعافها</h2>
+                    </div>
+                    <div class="text-slate-600 leading-[1.8] space-y-8">
+                        <p class="text-lg">الكسر هو انقطاع أو شرخ في العظم نتيجة السقوط أو الحوادث أو الضربات القوية.</p>
+
+                        <!-- Signs -->
+                        <div class="p-6 bg-slate-50 rounded-xl border border-slate-100">
+                            <h3 class="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+                                <i data-lucide="eye" class="text-red-600 w-5 h-5"></i> علامات الكسور
+                            </h3>
+                            <ul class="grid grid-cols-2 md:grid-cols-4 gap-4 text-slate-700">
+                                <li class="bg-white p-3 rounded-lg border border-slate-100 text-center font-medium">ألم شديد</li>
+                                <li class="bg-white p-3 rounded-lg border border-slate-100 text-center font-medium">تورم أو تغير في شكل الطرف</li>
+                                <li class="bg-white p-3 rounded-lg border border-slate-100 text-center font-medium">صعوبة أو عدم القدرة على الحركة</li>
+                                <li class="bg-white p-3 rounded-lg border border-slate-100 text-center font-medium">ظهور كدمات</li>
+                            </ul>
+                        </div>
+
+                        <!-- First Aid Steps -->
+                        <div class="p-6 bg-white rounded-xl border border-slate-100 shadow-sm space-y-4">
+                            <h3 class="text-xl font-bold text-slate-900 mb-2 flex items-center gap-2">
+                                <i data-lucide="heart-pulse" class="text-red-700 w-5 h-5"></i> كيفية إسعاف الكسور
+                            </h3>
+                            <ul class="space-y-3 ps-4 list-decimal list-inside text-slate-700">
+                                <li>منع المصاب من تحريك الجزء المصاب.</li>
+                                <li>تثبيت الطرف المصاب باستخدام جبيرة أو قطعة مستقيمة.</li>
+                                <li>وضع كمادات باردة لتخفيف التورم.</li>
+                                <li>نقل المصاب إلى المستشفى بحذر.</li>
+                                <li>في حالة الكسور المفتوحة يجب تغطية الجرح بضمادة نظيفة دون الضغط على العظم.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Warning -->
+                        <div class="p-6 bg-red-100 rounded-xl border border-red-200 text-red-900 flex gap-4">
+                            <i data-lucide="alert-octagon" class="w-6 h-6 text-red-600 shrink-0"></i>
+                            <div>
+                                <h4 class="font-bold text-red-700 mb-1">تنبيه مهم</h4>
+                                <p class="text-slate-800">لا تحاول إعادة العظم إلى مكانه بنفسك، لأن ذلك قد يسبب ضررًا أكبر.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Fainting -->
+                <section id="fainting" class="slide-up scroll-mt-28">
+                    <div class="flex items-center gap-4 mb-8 border-r-4 border-red-600 pr-6">
+                        <h2 class="text-3xl font-bold text-slate-900">الإغماء وكيفية إسعافه</h2>
+                    </div>
+                    <div class="text-slate-600 leading-[1.8] space-y-8">
+                        <p class="text-lg">الإغماء هو فقدان مؤقت للوعي بسبب انخفاض تدفق الدم إلى الدماغ، وقد يحدث نتيجة التعب أو الخوف أو انخفاض السكر أو الحرارة الشديدة.</p>
+
+                        <!-- Symptoms -->
+                        <div class="p-6 bg-slate-50 rounded-xl border border-slate-100">
+                            <h3 class="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+                                <i data-lucide="activity" class="text-red-600 w-5 h-5"></i> أعراض الإغماء
+                            </h3>
+                            <ul class="grid grid-cols-2 md:grid-cols-4 gap-4 text-slate-700">
+                                <li class="bg-white p-3 rounded-lg border border-slate-100 text-center font-medium">دوخة وضعف مفاجئ</li>
+                                <li class="bg-white p-3 rounded-lg border border-slate-100 text-center font-medium">شحوب الوجه</li>
+                                <li class="bg-white p-3 rounded-lg border border-slate-100 text-center font-medium">تعرق وبرودة الجسم</li>
+                                <li class="bg-white p-3 rounded-lg border border-slate-100 text-center font-medium">فقدان الوعي لفترة قصيرة</li>
+                            </ul>
+                        </div>
+
+                        <!-- First Aid Steps -->
+                        <div class="p-6 bg-white rounded-xl border border-slate-100 shadow-sm space-y-4">
+                            <h3 class="text-xl font-bold text-slate-900 mb-2 flex items-center gap-2">
+                                <i data-lucide="heart-pulse" class="text-red-700 w-5 h-5"></i> كيفية إسعاف الإغماء
+                            </h3>
+                            <ul class="space-y-3 ps-4 list-decimal list-inside text-slate-700">
+                                <li>مساعدة المصاب على الاستلقاء على ظهره.</li>
+                                <li>رفع الساقين قليلًا لتحسين تدفق الدم إلى الدماغ.</li>
+                                <li>فك الملابس الضيقة حول الرقبة والصدر.</li>
+                                <li>التأكد من وجود تهوية جيدة.</li>
+                                <li>عدم إعطاء المصاب أي طعام أو شراب قبل استعادة وعيه الكامل.</li>
+                                <li>إذا استمر الإغماء لأكثر من دقائق قليلة يجب طلب الإسعاف فورًا.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Role of first aid in society -->
+                <section id="society-role" class="slide-up scroll-mt-28">
+                    <div class="flex items-center gap-4 mb-8 border-r-4 border-red-600 pr-6">
+                        <h2 class="text-3xl font-bold text-slate-900">دور الإسعافات الأولية في المجتمع</h2>
+                    </div>
+                    <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 text-slate-600 leading-[1.8] space-y-6">
+                        <p class="text-lg">
+                            تساعد الإسعافات الأولية على نشر الوعي الصحي بين الناس، وتجعل الأفراد أكثر قدرة على التعامل مع الحوادث بثقة ومسؤولية. كما أنها تقلل من خطورة الإصابات وتمنح المصاب فرصة أفضل للبقاء والتعافي.
+                        </p>
+                        <p class="text-lg">
+                            ولهذا السبب، تهتم المدارس والجامعات والمؤسسات الصحية بتنظيم دورات تدريبية لتعليم الإسعافات الأولية، لأن كل شخص قد يجد نفسه يومًا ما في موقف يحتاج فيه إلى إنقاذ حياة إنسان.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- Conclusion -->
+                <section id="conclusion" class="slide-up scroll-mt-28 bg-red-50/40 p-8 rounded-3xl border border-red-100/50">
+                    <h3 class="text-2xl font-bold text-red-700 mb-4">خاتمة</h3>
+                    <p class="text-slate-700 leading-[1.8] text-lg">
+                        إن تعلم الإسعافات الأولية ليس أمرًا اختياريًا، بل هو مهارة ضرورية ومهمة لكل فرد في المجتمع. فالتصرف السريع والهادئ في اللحظات الحرجة قد يصنع فرقًا كبيرًا بين الحياة والموت. ومن خلال معرفة أساسيات التعامل مع الجروح والحروق والكسور والإغماء وغيرها من الحالات الطارئة، يصبح الإنسان أكثر قدرة على تقديم المساعدة وحماية الآخرين حتى وصول الرعاية الطبية المتخصصة. لذلك يجب على الجميع الحرص على تعلم هذه المهارات الإنسانية المهمة، لأنها قد تنقذ حياة شخص في أي وقت.
+                    </p>
+                </section>
+
+                <!-- Video Tutorial -->
+                <section id="video-tutorial" class="slide-up scroll-mt-28 space-y-6">
+                    <div class="flex items-center gap-4 mb-4 border-r-4 border-red-600 pr-6">
+                        <h2 class="text-3xl font-bold text-slate-900">فيديو تعليمي</h2>
+                    </div>
+                    <p class="text-lg text-slate-600">شاهد هذا الفيديو التوضيحي لمعرفة كيفية تقديم الإسعافات الأولية بشكل علمي وصحيح:</p>
+                    <div class="aspect-video w-full max-w-4xl mx-auto rounded-2xl overflow-hidden shadow-lg border border-slate-100 bg-black">
+                        <iframe 
+                            class="w-full h-full" 
+                            src="https://www.youtube.com/embed/FAJxNbJ71mc" 
+                            title="First Aid Video Tutorial" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer" class="bg-medical-grey border-t border-slate-200 pt-20 pb-10 scroll-mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-16 mb-16 text-right">
+                <!-- Branding -->
+                <div class="space-y-6">
+                    <div class="flex items-center gap-2 justify-start">
+                        <div class="bg-medical-teal-light p-2 rounded-md"><i data-lucide="compass" class="w-5 h-5 text-medical-teal"></i></div>
+                        <span class="text-xl font-bold text-medical-teal-dark">بوصلة صحة المجتمع</span>
+                    </div>
+                    <p class="text-slate-600 leading-relaxed max-w-sm">
+                        منصة توعوية شاملة تهدف إلى نشر الوعي الصحي والاجتماعي الصحيح وتمكين الأفراد من بناء حياة متوازنة ومستقرة.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="space-y-6 text-right">
+                    <h3 class="text-medical-teal-dark font-bold text-sm uppercase tracking-widest">روابط سريعة</h3>
+                    <ul class="space-y-4 text-slate-600 font-medium">
+                        <li><a href="index.html" class="hover:text-medical-teal transition-colors flex items-center gap-2"><i data-lucide="chevron-left" class="w-4 h-4"></i> الرئيسية</a></li>
+                        <li><a href="index.html#health-topics" class="hover:text-medical-teal transition-colors flex items-center gap-2"><i data-lucide="chevron-left" class="w-4 h-4"></i> الموضوعات الصحية</a></li>
+                        <li><a href="index.html#social-awareness" class="hover:text-medical-teal transition-colors flex items-center gap-2"><i data-lucide="chevron-left" class="w-4 h-4"></i> الموضوعات الاجتماعية</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="space-y-6 text-right font-medium">
+                    <h3 class="text-medical-teal-dark font-bold text-sm uppercase tracking-widest">تواصل معنا</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-4 text-slate-600">
+                            <div class="bg-white w-10 h-10 rounded-md shadow-sm border border-slate-100 flex items-center justify-center shrink-0"><i data-lucide="mail" class="w-5 h-5 text-medical-teal"></i></div>
+                            <span>Example@gmail.com</span>
+                        </div>
+                        <div class="flex items-center gap-4 text-slate-600">
+                            <div class="bg-white w-10 h-10 rounded-md shadow-sm border border-slate-100 relative flex items-center justify-center shrink-0">
+                                <i data-lucide="message-circle" class="w-5 h-5 text-medical-teal"></i>
+                                <i data-lucide="phone" class="w-2.5 h-2.5 text-medical-teal absolute" style="transform: translateY(-1px);"></i>
+                            </div>
+                            <a href="https://wa.me/201050919907" target="_blank" class="hover:text-medical-teal transition-colors" dir="ltr">+20 10 50919907</a>
+                        </div>
+                        <div class="flex items-center gap-4 text-slate-600">
+                            <div class="bg-white w-10 h-10 rounded-md shadow-sm border border-slate-100 flex items-center justify-center shrink-0"><i data-lucide="map-pin" class="w-5 h-5 text-medical-teal"></i></div>
+                            <span>جمهورية مصر العربية ، الفيوم</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-slate-200 pt-10 flex flex-col md:flex-row justify-between items-center gap-6">
+                <p class="text-sm text-slate-500">© 2026 بوصلة صحة المجتمع. جميع الحقوق محفوظة.</p>
+                <div class="flex gap-8 text-xs font-bold text-slate-400 uppercase tracking-widest">
+                    <a href="#" class="hover:text-medical-teal">سياسة الخصوصية</a>
+                    <a href="#" class="hover:text-medical-teal">شروط الاستخدام</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Init Lucide Icons
+        lucide.createIcons();
+
+        // Responsive Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        let isOpen = false;
+        menuBtn.addEventListener('click', () => {
+            isOpen = !isOpen;
+            mobileMenu.classList.toggle('menu-open');
+            const icon = menuBtn.querySelector('[data-lucide]');
+            if (icon) {
+                icon.setAttribute('data-lucide', isOpen ? 'x' : 'menu');
+                lucide.createIcons();
+            }
+        });
+
+        // Close menu when a link is clicked
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('menu-open');
+                isOpen = false;
+                const icon = menuBtn.querySelector('[data-lucide]');
+                if (icon) {
+                    icon.setAttribute('data-lucide', 'menu');
+                    lucide.createIcons();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
