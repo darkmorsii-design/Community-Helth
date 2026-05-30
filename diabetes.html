@@ -173,38 +173,43 @@
                         </div>
 
                         <!-- Risk Factors -->
-                        <div class="bg-white p-8 rounded-2xl border border-medical-teal-light shadow-sm">
-                            <h3 class="text-xl font-bold text-medical-teal-dark mb-6">عوامل الخطورة</h3>
-                            <ul class="space-y-4">
-                                <li class="flex gap-3 text-slate-600">
-                                    <i data-lucide="hourglass" class="w-5 h-5 text-medical-teal shrink-0"></i>
-                                    <span><strong class="text-slate-800">العمر:</strong> كلما زاد العمر، زادت احتمالية الإصابة بمرض السكري من النوع الثاني.</span>
-                                </li>
-                                <li class="flex gap-3 text-slate-600">
-                                    <i data-lucide="user" class="w-5 h-5 text-medical-teal shrink-0"></i>
-                                    <span><strong class="text-slate-800">الوزن:</strong> البدانة أو زيادة الوزن تعتبر عامل خطورة رئيسي لمرض السكري.</span>
-                                </li>
-                                <li class="flex gap-3 text-slate-600">
-                                    <i data-lucide="users" class="w-5 h-5 text-medical-teal shrink-0"></i>
-                                    <span><strong class="text-slate-800">الوراثة:</strong> وجود أفراد في العائلة مصابين بمرض السكري يزيد من احتمالية الاصابة به.</span>
-                                </li>
-                                <li class="flex gap-3 text-slate-600">
-                                    <i data-lucide="activity" class="w-5 h-5 text-medical-teal shrink-0"></i>
-                                    <span><strong class="text-slate-800">نمط الحياة:</strong> النشاط البدني الضعيف والنظام الغذائي السيء يزيدان من خطر الإصابة بمرض السكري.</span>
-                                </li>
-                                <li class="flex gap-3 text-slate-600">
-                                    <i data-lucide="heart-pulse" class="w-5 h-5 text-medical-teal shrink-0"></i>
-                                    <span><strong class="text-slate-800">ضغط الدم ومستويات الكولسترول:</strong> ارتفاع ضغط الدم ومستويات الكولسترول العالية يمكن أن تزيدان من خطر الاصابة بمرض السكري.</span>
-                                </li>
-                                <li class="flex gap-3 text-slate-600">
-                                    <i data-lucide="brain" class="w-5 h-5 text-medical-teal shrink-0"></i>
-                                    <span><strong class="text-slate-800">التوتر والقلق:</strong> الضغوط النفسية المستمرة يمكن أن تزيد من احتمالية الاصابة بمرض السكري.</span>
-                                </li>
-                                <li class="flex gap-3 text-slate-600">
-                                    <i data-lucide="history" class="w-5 h-5 text-medical-teal shrink-0"></i>
-                                    <span><strong class="text-slate-800">التاريخ الطبي:</strong> ارتفاع مستويات السكر في الدم خلال الحمل (سكري الحمل) أو ارتفاع مستويات السكر في الدم دون وجود أعراض واضحة (ما قبل السكري) يمكن أن يزيدان من خطر الاصابة بمرض السكري لاحقاً في الحياة.</span>
-                                </li>
-                            </ul>
+                        <div class="bg-white p-8 rounded-2xl border border-medical-teal-light shadow-sm flex flex-col justify-between">
+                            <div>
+                                <h3 class="text-xl font-bold text-medical-teal-dark mb-6">عوامل الخطورة</h3>
+                                <ul class="space-y-4 mb-6">
+                                    <li class="flex gap-3 text-slate-600">
+                                        <i data-lucide="hourglass" class="w-5 h-5 text-medical-teal shrink-0"></i>
+                                        <span><strong class="text-slate-800">العمر:</strong> كلما زاد العمر، زادت احتمالية الإصابة بمرض السكري من النوع الثاني.</span>
+                                    </li>
+                                    <li class="flex gap-3 text-slate-600">
+                                        <i data-lucide="user" class="w-5 h-5 text-medical-teal shrink-0"></i>
+                                        <span><strong class="text-slate-800">الوزن:</strong> البدانة أو زيادة الوزن تعتبر عامل خطورة رئيسي لمرض السكري.</span>
+                                    </li>
+                                    <li class="flex gap-3 text-slate-600">
+                                        <i data-lucide="users" class="w-5 h-5 text-medical-teal shrink-0"></i>
+                                        <span><strong class="text-slate-800">الوراثة:</strong> وجود أفراد في العائلة مصابين بمرض السكري يزيد من احتمالية الاصابة به.</span>
+                                    </li>
+                                    <li class="flex gap-3 text-slate-600">
+                                        <i data-lucide="activity" class="w-5 h-5 text-medical-teal shrink-0"></i>
+                                        <span><strong class="text-slate-800">نمط الحياة:</strong> النشاط البدني الضعيف والنظام الغذائي السيء يزيدان من خطر الإصابة بمرض السكري.</span>
+                                    </li>
+                                    <li class="flex gap-3 text-slate-600">
+                                        <i data-lucide="heart-pulse" class="w-5 h-5 text-medical-teal shrink-0"></i>
+                                        <span><strong class="text-slate-800">ضغط الدم ومستويات الكولسترول:</strong> ارتفاع ضغط الدم ومستويات الكولسترول العالية يمكن أن تزيدان من خطر الاصابة بمرض السكري.</span>
+                                    </li>
+                                    <li class="flex gap-3 text-slate-600">
+                                        <i data-lucide="brain" class="w-5 h-5 text-medical-teal shrink-0"></i>
+                                        <span><strong class="text-slate-800">التوتر والقلق:</strong> الضغوط النفسية المستمرة يمكن أن تزيد من احتمالية الاصابة بمرض السكري.</span>
+                                    </li>
+                                    <li class="flex gap-3 text-slate-600">
+                                        <i data-lucide="history" class="w-5 h-5 text-medical-teal shrink-0"></i>
+                                        <span><strong class="text-slate-800">التاريخ الطبي:</strong> ارتفاع مستويات السكر في الدم خلال الحمل (سكري الحمل) أو ارتفاع مستويات السكر في الدم دون وجود أعراض واضحة (ما قبل السكري) يمكن أن يزيدان من خطر الاصابة بمرض السكري لاحقاً في الحياة.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="w-full mt-4">
+                                <img src="assets/images/diabetes/8.jpg" alt="عوامل خطورة الإصابة بالسكري" class="rounded-xl shadow-md w-full h-auto border border-slate-100 transition-all duration-300 hover:scale-[1.03] cursor-zoom-in">
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -217,16 +222,21 @@
                             <h2 class="text-3xl font-bold text-slate-900 mb-8 flex items-center gap-4">
                                 <i data-lucide="layers" class="w-8 h-8 text-medical-teal"></i> أنواع مرض السكري
                             </h2>
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                                <div class="p-8 rounded-2xl border-2 border-medical-teal-light bg-white">
-                                    <h3 class="text-xl font-bold text-slate-900 mb-4">النوع الأول (Type 1)</h3>
-                                    <p class="text-slate-600 leading-relaxed italic mb-4">توقف البنكرياس عن إنتاج الإنسولين.</p>
-                                    <p class="text-slate-600">يتطلب علاجاً بحقن الإنسولين بانتظام لتعويض نقص الهرمون.</p>
+                            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+                                <div class="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-8">
+                                    <div class="p-8 rounded-2xl border-2 border-medical-teal-light bg-white shadow-sm hover:border-medical-teal/30 transition-colors">
+                                        <h3 class="text-xl font-bold text-slate-900 mb-4">النوع الأول (Type 1)</h3>
+                                        <p class="text-slate-600 leading-relaxed italic mb-4">توقف البنكرياس عن إنتاج الإنسولين.</p>
+                                        <p class="text-slate-600">يتطلب علاجاً بحقن الإنسولين بانتظام لتعويض نقص الهرمون.</p>
+                                    </div>
+                                    <div class="p-8 rounded-2xl border-2 border-medical-blue-light bg-white shadow-sm hover:border-medical-blue-light/40 transition-colors">
+                                        <h3 class="text-xl font-bold text-slate-900 mb-4">النوع الثاني (Type 2)</h3>
+                                        <p class="text-slate-600 leading-relaxed italic mb-4">مقاومة الجسم للإنسولين أو نقصه.</p>
+                                        <p class="text-slate-600">يمكن التحكم فيه غالباً بتغيير نمط الحياة، وقد يتطلب أدوية أو إنسولين أحياناً.</p>
+                                    </div>
                                 </div>
-                                <div class="p-8 rounded-2xl border-2 border-medical-blue-light bg-white">
-                                    <h3 class="text-xl font-bold text-slate-900 mb-4">النوع الثاني (Type 2)</h3>
-                                    <p class="text-slate-600 leading-relaxed italic mb-4">مقاومة الجسم للإنسولين أو نقصه.</p>
-                                    <p class="text-slate-600">يمكن التحكم فيه غالباً بتغيير نمط الحياة، وقد يتطلب أدوية أو إنسولين أحياناً.</p>
+                                <div class="lg:col-span-1">
+                                    <img src="assets/images/diabetes/5.jpg" alt="أنواع مرض السكري" class="rounded-2xl shadow-md w-full h-auto border border-slate-200 transition-transform duration-300 hover:scale-105 cursor-zoom-in">
                                 </div>
                             </div>
                         </div>
@@ -234,44 +244,51 @@
                         <!-- Symptoms -->
                         <div class="bg-slate-900 text-white p-12 rounded-3xl overflow-hidden relative">
                             <div class="absolute top-0 left-0 w-32 h-32 bg-medical-teal/20 blur-3xl rounded-full -translate-x-1/2 -translate-y-1/2"></div>
-                            <h2 class="text-3xl font-bold mb-10 border-r-4 border-medical-teal pr-6">الأعراض</h2>
-                            <p class="text-slate-400 mb-8 italic">أعراض مرض السكري قد تتضمن:</p>
-                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                                <div class="flex items-start gap-4">
-                                    <div class="bg-medical-teal/20 p-2 rounded-lg text-medical-teal"><i data-lucide="droplets"></i></div>
-                                    <div><h4 class="font-bold">العطش الزائد والجفاف</h4><p class="text-slate-400 text-sm">شعور بالعطش الشديد وجفاف الفم.</p></div>
+                            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center relative z-10">
+                                <div class="lg:col-span-8">
+                                    <h2 class="text-3xl font-bold mb-10 border-r-4 border-medical-teal pr-6">الأعراض</h2>
+                                    <p class="text-slate-400 mb-8 italic">أعراض مرض السكري قد تتضمن:</p>
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                                        <div class="flex items-start gap-4">
+                                            <div class="bg-medical-teal/20 p-2 rounded-lg text-medical-teal"><i data-lucide="droplets"></i></div>
+                                            <div><h4 class="font-bold">العطش الزائد والجفاف</h4><p class="text-slate-400 text-sm">شعور بالعطش الشديد وجفاف الفم.</p></div>
+                                        </div>
+                                        <div class="flex items-start gap-4">
+                                            <div class="bg-medical-teal/20 p-2 rounded-lg text-medical-teal"><i data-lucide="clock"></i></div>
+                                            <div><h4 class="font-bold">التبول المتكرر</h4><p class="text-slate-400 text-sm">زيادة في التبول، خاصةً ليلاً.</p></div>
+                                        </div>
+                                        <div class="flex items-start gap-4">
+                                            <div class="bg-medical-teal/20 p-2 rounded-lg text-medical-teal"><i data-lucide="utensils"></i></div>
+                                            <div><h4 class="font-bold">الجوع المفرط</h4><p class="text-slate-400 text-sm">شعور بالجوع المفرط حتى بعد تناول الطعام.</p></div>
+                                        </div>
+                                        <div class="flex items-start gap-4">
+                                            <div class="bg-medical-teal/20 p-2 rounded-lg text-medical-teal"><i data-lucide="trending-down"></i></div>
+                                            <div><h4 class="font-bold">فقدان الوزن الغير المبرر</h4><p class="text-slate-400 text-sm">فقدان الوزن دون أي سبب ظاهر، على الرغم من زيادة الشهية.</p></div>
+                                        </div>
+                                        <div class="flex items-start gap-4">
+                                            <div class="bg-medical-teal/20 p-2 rounded-lg text-medical-teal"><i data-lucide="battery-low"></i></div>
+                                            <div><h4 class="font-bold">التعب والإرهاق</h4><p class="text-slate-400 text-sm">شعور بالتعب والإرهاق دون سبب واضح.</p></div>
+                                        </div>
+                                        <div class="flex items-start gap-4">
+                                            <div class="bg-medical-teal/20 p-2 rounded-lg text-medical-teal"><i data-lucide="frown"></i></div>
+                                            <div><h4 class="font-bold">العصبية والتوتر</h4><p class="text-slate-400 text-sm">تغيرات في المزاج، العصبية، والتوتر.</p></div>
+                                        </div>
+                                        <div class="flex items-start gap-4">
+                                            <div class="bg-medical-teal/20 p-2 rounded-lg text-medical-teal"><i data-lucide="thermometer"></i></div>
+                                            <div><h4 class="font-bold">الجروح البطيئة في الشفاء</h4><p class="text-slate-400 text-sm">جروح وقروح تستغرق وقتاً طويلاً في الشفاء.</p></div>
+                                        </div>
+                                        <div class="flex items-start gap-4">
+                                            <div class="bg-medical-teal/20 p-2 rounded-lg text-medical-teal"><i data-lucide="eye"></i></div>
+                                            <div><h4 class="font-bold">الرؤية المشوشة</h4><p class="text-slate-400 text-sm">عدم وضوح الرؤية أو الرؤية المزعجة.</p></div>
+                                        </div>
+                                        <div class="flex items-start gap-4">
+                                            <div class="bg-medical-teal/20 p-2 rounded-lg text-medical-teal"><i data-lucide="hand"></i></div>
+                                            <div><h4 class="font-bold">التنميل في الأطراف</h4><p class="text-slate-400 text-sm">شعور بالتنميل أو الخدر في اليدين والقدمين.</p></div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="flex items-start gap-4">
-                                    <div class="bg-medical-teal/20 p-2 rounded-lg text-medical-teal"><i data-lucide="clock"></i></div>
-                                    <div><h4 class="font-bold">التبول المتكرر</h4><p class="text-slate-400 text-sm">زيادة في التبول، خاصةً ليلاً.</p></div>
-                                </div>
-                                <div class="flex items-start gap-4">
-                                    <div class="bg-medical-teal/20 p-2 rounded-lg text-medical-teal"><i data-lucide="utensils"></i></div>
-                                    <div><h4 class="font-bold">الجوع المفرط</h4><p class="text-slate-400 text-sm">شعور بالجوع المفرط حتى بعد تناول الطعام.</p></div>
-                                </div>
-                                <div class="flex items-start gap-4">
-                                    <div class="bg-medical-teal/20 p-2 rounded-lg text-medical-teal"><i data-lucide="trending-down"></i></div>
-                                    <div><h4 class="font-bold">فقدان الوزن الغير المبرر</h4><p class="text-slate-400 text-sm">فقدان الوزن دون أي سبب ظاهر، على الرغم من زيادة الشهية.</p></div>
-                                </div>
-                                <div class="flex items-start gap-4">
-                                    <div class="bg-medical-teal/20 p-2 rounded-lg text-medical-teal"><i data-lucide="battery-low"></i></div>
-                                    <div><h4 class="font-bold">التعب والإرهاق</h4><p class="text-slate-400 text-sm">شعور بالتعب والإرهاق دون سبب واضح.</p></div>
-                                </div>
-                                <div class="flex items-start gap-4">
-                                    <div class="bg-medical-teal/20 p-2 rounded-lg text-medical-teal"><i data-lucide="frown"></i></div>
-                                    <div><h4 class="font-bold">العصبية والتوتر</h4><p class="text-slate-400 text-sm">تغيرات في المزاج، العصبية، والتوتر.</p></div>
-                                </div>
-                                <div class="flex items-start gap-4">
-                                    <div class="bg-medical-teal/20 p-2 rounded-lg text-medical-teal"><i data-lucide="thermometer"></i></div>
-                                    <div><h4 class="font-bold">الجروح البطيئة في الشفاء</h4><p class="text-slate-400 text-sm">جروح وقروح تستغرق وقتاً طويلاً في الشفاء.</p></div>
-                                </div>
-                                <div class="flex items-start gap-4">
-                                    <div class="bg-medical-teal/20 p-2 rounded-lg text-medical-teal"><i data-lucide="eye"></i></div>
-                                    <div><h4 class="font-bold">الرؤية المشوشة</h4><p class="text-slate-400 text-sm">عدم وضوح الرؤية أو الرؤية المزعجة.</p></div>
-                                </div>
-                                <div class="flex items-start gap-4">
-                                    <div class="bg-medical-teal/20 p-2 rounded-lg text-medical-teal"><i data-lucide="hand"></i></div>
-                                    <div><h4 class="font-bold">التنميل في الأطراف</h4><p class="text-slate-400 text-sm">شعور بالتنميل أو الخدر في اليدين والقدمين.</p></div>
+                                <div class="lg:col-span-4 w-full">
+                                    <img src="assets/images/diabetes/9.jpg" alt="أعراض مرض السكري الشائعة" class="rounded-2xl shadow-xl w-full h-auto border border-white/10 transition-transform duration-300 hover:scale-105 cursor-zoom-in">
                                 </div>
                             </div>
                         </div>
@@ -388,12 +405,17 @@
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
                                 <section>
                                     <h4 class="font-bold text-slate-900 mb-6 flex items-center gap-2"><i data-lucide="map-pin" class="w-5 h-5"></i> أماكن الحقن</h4>
-                                    <ul class="space-y-4">
-                                        <li class="bg-white p-4 rounded-xl text-sm border border-slate-100 shadow-sm"><strong class="text-medical-blue">البطن:</strong> الأكثر شيوعاً، على بعد 5 سم من السرة.</li>
-                                        <li class="bg-white p-4 rounded-xl text-sm border border-slate-100 shadow-sm"><strong class="text-medical-blue">أعلى الذراع:</strong> منطقة خارجية علوية.</li>
-                                        <li class="bg-white p-4 rounded-xl text-sm border border-slate-100 shadow-sm"><strong class="text-medical-blue">الفخذ:</strong> في منتصف المسافة بين الركبة والورك.</li>
-                                        <li class="bg-white p-4 rounded-xl text-sm border border-slate-100 shadow-sm"><strong class="text-medical-blue">خلف الورك:</strong> قد يحتاج مساعدة شخص آخر.</li>
-                                    </ul>
+                                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
+                                        <ul class="space-y-4 lg:col-span-1">
+                                            <li class="bg-white p-4 rounded-xl text-sm border border-slate-100 shadow-sm"><strong class="text-medical-blue">البطن:</strong> الأكثر شيوعاً، على بعد 5 سم من السرة.</li>
+                                            <li class="bg-white p-4 rounded-xl text-sm border border-slate-100 shadow-sm"><strong class="text-medical-blue">أعلى الذراع:</strong> منطقة خارجية علوية.</li>
+                                            <li class="bg-white p-4 rounded-xl text-sm border border-slate-100 shadow-sm"><strong class="text-medical-blue">الفخذ:</strong> في منتصف المسافة بين الركبة والورك.</li>
+                                            <li class="bg-white p-4 rounded-xl text-sm border border-slate-100 shadow-sm"><strong class="text-medical-blue">خلف الورك:</strong> قد يحتاج مساعدة شخص آخر.</li>
+                                        </ul>
+                                        <div class="lg:col-span-1 w-full">
+                                            <img src="assets/images/diabetes/4.jpg" alt="أماكن حقن الإنسولين في الجسم" class="rounded-2xl shadow-md w-full h-auto border border-slate-200 transition-transform duration-300 hover:scale-105 cursor-zoom-in">
+                                        </div>
+                                    </div>
                                 </section>
                                 <section>
                                     <h4 class="font-bold text-slate-900 mb-6 flex items-center gap-2"><i data-lucide="info" class="w-5 h-5"></i> كيف يتم الحقن؟</h4>
@@ -469,7 +491,16 @@
                             <h2 class="text-3xl md:text-4xl font-bold mb-10 flex items-center justify-center gap-4 text-white">
                                 <i data-lucide="shield-check" class="w-10 h-10 text-medical-teal"></i> الوقاية من مرض السكري
                             </h2>
-                            <p class="text-xl text-center mb-12 opacity-90 font-medium">تتضمن استراتيجيات الوقاية من مرض السكري عدة خطوات من بينها:</p>
+                            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center mb-12">
+                                <div class="lg:col-span-8">
+                                    <p class="text-xl text-right opacity-90 font-medium leading-relaxed">
+                                        تتنوع طرق الوقاية من هذا المرض المزمن، والالتزام بالقواعد الصحية والمتابعة الطبية يوفر بيئة آمنة للوقاية وتجنب الإصابة وعيش حياة سليمة وصحية خالية من المشاكل والمضاعفات. كما تتضمن استراتيجيات الوقاية من مرض السكري عدة خطوات ضرورية وهامة:
+                                    </p>
+                                </div>
+                                <div class="lg:col-span-4 w-full">
+                                    <img src="assets/images/diabetes/1.jpg" alt="طرق الوقاية من مرض السكري" class="rounded-2xl shadow-xl w-full h-auto border border-white/20 transition-transform duration-300 hover:scale-105 cursor-zoom-in">
+                                </div>
+                            </div>
                             
                             <div class="space-y-12">
                                 <!-- 1. Healthy Diet -->
@@ -574,18 +605,23 @@
                 <!-- Complications -->
                 <section id="complications" class="slide-up">
                     <h2 class="text-3xl font-bold text-slate-900 mb-8 border-r-4 border-medical-teal pr-6">المضاعفات</h2>
-                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
-                        <div class="p-6 bg-white rounded-2xl shadow-sm border border-slate-100">
-                            <h4 class="font-bold text-slate-900 mb-2">القلب والأوعية</h4>
-                            <p class="text-xs text-slate-500">خطر السكتات وأمراض الشرايين.</p>
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                        <div class="lg:col-span-8 grid grid-cols-1 sm:grid-cols-3 gap-6">
+                            <div class="p-6 bg-white rounded-2xl shadow-sm border border-slate-100 hover:border-medical-teal/30 transition-colors">
+                                <h4 class="font-bold text-slate-900 mb-2">القلب والأوعية</h4>
+                                <p class="text-xs text-slate-500">خطر السكتات وأمراض الشرايين.</p>
+                            </div>
+                            <div class="p-6 bg-white rounded-2xl shadow-sm border border-slate-100 hover:border-medical-teal/30 transition-colors">
+                                <h4 class="font-bold text-slate-900 mb-2">الكلى</h4>
+                                <p class="text-xs text-slate-500">تلف وظائف الكلى الحيوية.</p>
+                            </div>
+                            <div class="p-6 bg-white rounded-2xl shadow-sm border border-slate-100 hover:border-medical-teal/30 transition-colors">
+                                <h4 class="font-bold text-slate-900 mb-2">العين</h4>
+                                <p class="text-xs text-slate-500">اعتلال الشبكية وفقدان البصر.</p>
+                            </div>
                         </div>
-                        <div class="p-6 bg-white rounded-2xl shadow-sm border border-slate-100">
-                            <h4 class="font-bold text-slate-900 mb-2">الكلى</h4>
-                            <p class="text-xs text-slate-500">تلف وظائف الكلى الحيوية.</p>
-                        </div>
-                        <div class="p-6 bg-white rounded-2xl shadow-sm border border-slate-100">
-                            <h4 class="font-bold text-slate-900 mb-2">العين</h4>
-                            <p class="text-xs text-slate-500">اعتلال الشبكية وفقدان البصر.</p>
+                        <div class="lg:col-span-4 w-full">
+                            <img src="assets/images/diabetes/11.jpg" alt="مضاعفات مرض السكري" class="rounded-2xl shadow-md w-full h-auto border border-slate-100 transition-transform duration-300 hover:scale-105 cursor-zoom-in">
                         </div>
                     </div>
                 </section>
@@ -646,31 +682,36 @@
                             <h3 class="text-2xl md:text-3xl font-bold mb-10 flex items-center gap-3 text-medical-blue-light">
                                 <i data-lucide="alert-circle" class="w-8 h-8"></i> الاعراض
                             </h3>
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-right">
-                                <ul class="space-y-6">
-                                    <li class="bg-black/20 p-6 rounded-xl border-r-4 border-medical-blue-light">
-                                        <h4 class="font-bold text-lg mb-2">التنميل والخدر</h4>
-                                        <p class="text-sm opacity-80">الشعور بالألم المزمن أو فقدان الإحساس التام.</p>
-                                    </li>
-                                    <li class="bg-black/20 p-6 rounded-xl border-r-4 border-medical-blue-light">
-                                        <h4 class="font-bold text-lg mb-2">القروح والجروح</h4>
-                                        <p class="text-sm opacity-80">تلك التي لا تلتئم بسرعة أو تتفاقم مع الوقت.</p>
-                                    </li>
-                                    <li class="bg-black/20 p-6 rounded-xl border-r-4 border-medical-blue-light">
-                                        <h4 class="font-bold text-lg mb-2">تغيرات لون الجلد</h4>
-                                        <p class="text-sm opacity-80">ظهور بقع داكنة أو حمراء تدل على مشكلة في الدورة الدموية.</p>
-                                    </li>
-                                </ul>
-                                <ul class="space-y-6">
-                                    <li class="bg-black/20 p-6 rounded-xl border-r-4 border-medical-blue-light">
-                                        <h4 class="font-bold text-lg mb-2">التورم في القدمين</h4>
-                                        <p class="text-sm opacity-80">يحدث غالباً بسبب احتباس السوائل أو الالتهاب النشط.</p>
-                                    </li>
-                                    <li class="bg-black/20 p-6 rounded-xl border-r-4 border-medical-blue-light">
-                                        <h4 class="font-bold text-lg mb-2">الإصابات المتكررة</h4>
-                                        <p class="text-sm opacity-80">التعرض لإصابات متكررة بسبب ضعف الإحساس الوقائي بالألم.</p>
-                                    </li>
-                                </ul>
+                            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 text-right items-center">
+                                <div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <ul class="space-y-6">
+                                        <li class="bg-black/20 p-6 rounded-xl border-r-4 border-medical-blue-light">
+                                            <h4 class="font-bold text-lg mb-2">التنميل والخدر</h4>
+                                            <p class="text-sm opacity-80">الشعور بالألم المزمن أو فقدان الإحساس التام.</p>
+                                        </li>
+                                        <li class="bg-black/20 p-6 rounded-xl border-r-4 border-medical-blue-light">
+                                            <h4 class="font-bold text-lg mb-2">القروح والجروح</h4>
+                                            <p class="text-sm opacity-80">تلك التي لا تلتئم بسرعة أو تتفاقم مع الوقت.</p>
+                                        </li>
+                                        <li class="bg-black/20 p-6 rounded-xl border-r-4 border-medical-blue-light">
+                                            <h4 class="font-bold text-lg mb-2">تغيرات لون الجلد</h4>
+                                            <p class="text-sm opacity-80">ظهور بقع داكنة أو حمراء تدل على مشكلة في الدورة الدموية.</p>
+                                        </li>
+                                    </ul>
+                                    <ul class="space-y-6">
+                                        <li class="bg-black/20 p-6 rounded-xl border-r-4 border-medical-blue-light">
+                                            <h4 class="font-bold text-lg mb-2">التورم في القدمين</h4>
+                                            <p class="text-sm opacity-80">يحدث غالباً بسبب احتباس السوائل أو الالتهاب النشط.</p>
+                                        </li>
+                                        <li class="bg-black/20 p-6 rounded-xl border-r-4 border-medical-blue-light">
+                                            <h4 class="font-bold text-lg mb-2">الإصابات المتكررة</h4>
+                                            <p class="text-sm opacity-80">التعرض لإصابات متكررة بسبب ضعف الإحساس الوقائي بالألم.</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="lg:col-span-4 w-full">
+                                    <img src="assets/images/diabetes/3.jpg" alt="أعراض القدم السكرية" class="rounded-2xl shadow-xl w-full h-auto border border-white/10 transition-transform duration-300 hover:scale-105 cursor-zoom-in">
+                                </div>
                             </div>
                         </div>
 
@@ -764,26 +805,31 @@
                             <h3 class="text-2xl md:text-3xl font-bold mb-10 flex items-center gap-3 text-red-400">
                                 <i data-lucide="alert-triangle" class="w-8 h-8"></i> مضاعفات خطيرة
                             </h3>
-                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-right">
-                                <div class="bg-white/5 p-8 rounded-2xl border border-red-500/20 hover:bg-red-500/10 transition-colors">
-                                    <h4 class="text-xl font-bold mb-3 text-red-200">التقرحات المزمنة</h4>
-                                    <p class="text-sm opacity-80 text-slate-300">قروح عميقة قد تصل إلى الأوتار أو العظام وتصعب السيطرة عليها.</p>
+                            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 text-right">
+                                <div class="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                    <div class="bg-white/5 p-8 rounded-2xl border border-red-500/20 hover:bg-red-500/10 transition-colors">
+                                        <h4 class="text-xl font-bold mb-3 text-red-200">التقرحات المزمنة</h4>
+                                        <p class="text-sm opacity-80 text-slate-300">قروح عميقة قد تصل إلى الأوتار أو العظام وتصعب السيطرة عليها.</p>
+                                    </div>
+                                    <div class="bg-white/5 p-8 rounded-2xl border border-red-500/20 hover:bg-red-500/10 transition-colors">
+                                        <h4 class="text-xl font-bold mb-3 text-red-200">الالتهابات الميكروبية</h4>
+                                        <p class="text-sm opacity-80 text-slate-300">خراجات صديدية تحت الجلد تتطلب تدخلاً جراحياً فورياً تحت التخدير.</p>
+                                    </div>
+                                    <div class="bg-white/5 p-8 rounded-2xl border border-red-500/20 hover:bg-red-500/10 transition-colors">
+                                        <h4 class="text-xl font-bold mb-3 text-red-200">التهاب العظام</h4>
+                                        <p class="text-sm opacity-80 text-slate-300">انتقال العدوى لعظام القدم مما قد يهدد بسلامة الساق بأكملها.</p>
+                                    </div>
+                                    <div class="bg-white/5 p-8 rounded-2xl border border-red-500/20 hover:bg-red-500/10 transition-colors">
+                                        <h4 class="text-xl font-bold mb-3 text-red-200">تشوهات القدم</h4>
+                                        <p class="text-sm opacity-80 text-slate-300">انهيار عظام القدم (قدم شاركو) مما يغير شكلها بشكل دائم.</p>
+                                    </div>
+                                    <div class="bg-red-900/20 p-8 rounded-2xl border-2 border-red-600/50 hover:bg-red-700/20 transition-colors sm:col-span-2">
+                                        <h4 class="text-2xl font-bold mb-3 text-red-400">الغرغرينا والبتر</h4>
+                                        <p class="text-sm opacity-90 leading-relaxed text-slate-200">الغرغرينا هي أخطر المضاعفات عند موت الأنسجة تماماً. البتر هو الخيار الطبي الأخير لحماية المريض ومنع انتشار السموم لباقي الجسم.</p>
+                                    </div>
                                 </div>
-                                <div class="bg-white/5 p-8 rounded-2xl border border-red-500/20 hover:bg-red-500/10 transition-colors">
-                                    <h4 class="text-xl font-bold mb-3 text-red-200">الالتهابات الميكروبية</h4>
-                                    <p class="text-sm opacity-80 text-slate-300">خراجات صديدية تحت الجلد تتطلب تدخلاً جراحياً فورياً تحت التخدير.</p>
-                                </div>
-                                <div class="bg-white/5 p-8 rounded-2xl border border-red-500/20 hover:bg-red-500/10 transition-colors">
-                                    <h4 class="text-xl font-bold mb-3 text-red-200">التهاب العظام</h4>
-                                    <p class="text-sm opacity-80 text-slate-300">انتقال العدوى لعظام القدم مما قد يهدد بسلامة الساق بأكملها.</p>
-                                </div>
-                                <div class="bg-white/5 p-8 rounded-2xl border border-red-500/20 hover:bg-red-500/10 transition-colors">
-                                    <h4 class="text-xl font-bold mb-3 text-red-200">تشوهات القدم</h4>
-                                    <p class="text-sm opacity-80 text-slate-300">انهيار عظام القدم (قدم شاركو) مما يغير شكلها بشكل دائم.</p>
-                                </div>
-                                <div class="bg-red-900/20 p-8 rounded-2xl border-2 border-red-600/50 hover:bg-red-700/20 transition-colors lg:col-span-2">
-                                    <h4 class="text-2xl font-bold mb-3 text-red-400">الغرغرينا والبتر</h4>
-                                    <p class="text-sm opacity-90 leading-relaxed text-slate-200">الغرغرينا هي أخطر المضاعفات عند موت الأنسجة تماماً. البتر هو الخيار الطبي الأخير لحماية المريض ومنع انتشار السموم لباقي الجسم.</p>
+                                <div class="lg:col-span-4 w-full">
+                                    <img src="assets/images/diabetes/2.jpg" alt="مضاعفات القدم السكرية الخطيرة" class="rounded-2xl shadow-xl w-full h-auto border border-red-500/20 transition-transform duration-300 hover:scale-105 cursor-zoom-in">
                                 </div>
                             </div>
                         </div>
@@ -930,6 +976,74 @@
     <script>
         // Init Lucide Icons
         lucide.createIcons();
+
+        // Image Zoom/Lightbox Mechanism
+        document.addEventListener('DOMContentLoaded', () => {
+            const images = document.querySelectorAll('img');
+            images.forEach(img => {
+                img.classList.add('cursor-zoom-in');
+                img.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    openLightbox(img.src, img.alt);
+                });
+            });
+
+            function openLightbox(src, alt) {
+                const overlay = document.createElement('div');
+                overlay.id = 'image-lightbox';
+                overlay.className = 'fixed inset-0 z-[100] bg-slate-950/90 backdrop-blur-md flex items-center justify-center opacity-0 transition-opacity duration-300 cursor-zoom-out';
+                
+                let captionHTML = '';
+                if (alt) {
+                    captionHTML = `<p class="text-white/80 font-medium text-lg mt-4 text-center px-4 bg-slate-900/50 py-2 rounded-xl backdrop-blur-sm select-none">${alt}</p>`;
+                }
+
+                overlay.innerHTML = `
+                    <div class="relative max-w-[90vw] max-h-[90vh] flex flex-col items-center justify-center">
+                        <button class="absolute -top-12 left-0 text-white hover:text-rose-500 transition-colors p-2 focus:outline-none" aria-label="إغلاق">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+                        </button>
+                        <img src="${src}" alt="${alt || ''}" class="max-w-full max-h-[80vh] rounded-2xl object-contain shadow-2xl scale-95 transition-transform duration-300 select-none pointer-events-auto cursor-default">
+                        ${captionHTML}
+                    </div>
+                `;
+
+                document.body.appendChild(overlay);
+
+                setTimeout(() => {
+                    overlay.classList.remove('opacity-0');
+                    overlay.classList.add('opacity-100');
+                    const img = overlay.querySelector('img');
+                    if (img) img.classList.replace('scale-95', 'scale-100');
+                }, 10);
+
+                const closeLightbox = () => {
+                    overlay.classList.replace('opacity-100', 'opacity-0');
+                    const img = overlay.querySelector('img');
+                    if (img) img.classList.replace('scale-100', 'scale-95');
+                    setTimeout(() => {
+                        overlay.remove();
+                    }, 300);
+                    document.removeEventListener('keydown', handleEsc);
+                };
+
+                const handleEsc = (e) => {
+                    if (e.key === 'Escape') closeLightbox();
+                };
+
+                overlay.addEventListener('click', closeLightbox);
+                overlay.querySelector('button').addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    closeLightbox();
+                });
+                overlay.querySelector('img').addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    closeLightbox();
+                });
+
+                document.addEventListener('keydown', handleEsc);
+            }
+        });
 
         // Responsive Menu Toggle
         const menuBtn = document.getElementById('menu-btn');
